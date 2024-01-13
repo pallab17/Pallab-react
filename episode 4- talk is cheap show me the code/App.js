@@ -25,7 +25,7 @@ const Header = () => {
 };
 const RestaurantCard = (prop) => {
   console.log(prop); // prop ta hocche object ta jeita react pathache ei component e sob kota prop ke ekjayega ene wrap up kore
-  const {resName,cuisine} = prop;    
+  // const {resName,cuisine} = prop;    
    // destructure kore enechi jate direct 
   //  <h3>{resName}</h3>
   // <h4>{cuisine}</h4>
@@ -63,19 +63,168 @@ const {resName,cuisine} = prop; --< writing this
   );
 };
 
+const resObj = {
+  type: 'restaurant',
+  data: {
+    type: 'F',
+    id: '121603',
+    name: 'Kannur Food Point',
+    uuid: '51983905-e698-4e31-b0d7-e376eca56320',
+    city: '1',
+    area: 'Tavarekere',
+    totalRatingsString: '10000+ ratings',
+    cloudinaryImageId: 'bmwn4n4bn6n1tcpc8x2h',
+    cuisines: ['Kerala', 'Chinese'],
+    tags: [],
+    costForTwo: 30000,
+    costForTwoString: '₹300 FOR TWO',
+    deliveryTime: 24,
+    minDeliveryTime: 24,
+    maxDeliveryTime: 24,
+    slaString: '24 MINS',
+    lastMileTravel: 3,
+    slugs: {
+      restaurant: 'kannur-food-point-btm',
+      city: 'bangalore',
+    },
+    cityState: '1',
+    address:
+      '6/21,9TH CROSS ,1ST MAIN, VENKATESHWARA LAYOUT,SG PALYA, BENGALURU, - 560093',
+    locality: 'SG Palya',
+    parentId: 20974,
+    unserviceable: false,
+    veg: false,
+    select: false,
+    favorite: false,
+    tradeCampaignHeaders: [],
+    aggregatedDiscountInfo: {
+      header: '50% off',
+      shortDescriptionList: [
+        {
+          meta: '50% off on all orders',
+          discountType: 'Percentage',
+          operationType: 'RESTAURANT',
+        },
+      ],
+      descriptionList: [
+        {
+          meta: '50% off on all orders',
+          discountType: 'Percentage',
+          operationType: 'RESTAURANT',
+        },
+      ],
+      subHeader: '',
+      headerType: 0,
+      superFreedel: '',
+    },
+    aggregatedDiscountInfoV2: {
+      header: '50% OFF',
+      shortDescriptionList: [
+        {
+          meta: '',
+          discountType: 'Percentage',
+          operationType: 'RESTAURANT',
+        },
+      ],
+      descriptionList: [
+        {
+          meta: '50% off on all orders',
+          discountType: 'Percentage',
+          operationType: 'RESTAURANT',
+        },
+      ],
+      subHeader: '',
+      headerType: 0,
+      superFreedel: '',
+    },
+    ribbon: [
+      {
+        type: 'PROMOTED',
+      },
+    ],
+    chain: [],
+    feeDetails: {
+      fees: [
+        {
+          name: 'distance',
+          fee: 3700,
+          message: '',
+        },
+        {
+          name: 'time',
+          fee: 0,
+          message: '',
+        },
+        {
+          name: 'special',
+          fee: 0,
+          message: '',
+        },
+      ],
+      totalFees: 3700,
+      message: '',
+      title: 'Delivery Charge',
+      amount: '3700',
+      icon: '',
+    },
+    availability: {
+      opened: true,
+      nextOpenMessage: '',
+      nextCloseMessage: '',
+    },
+    longDistanceEnabled: 0,
+    rainMode: 'NONE',
+    thirdPartyAddress: false,
+    thirdPartyVendor: '',
+    adTrackingID: 'cid=6274849~p=1~eid=00000187-2c1c-96f0-0062-eea200b00103',
+    badges: {
+      imageBased: [],
+      textBased: [],
+      textExtendedBadges: [],
+    },
+    lastMileTravelString: '3 kms',
+    hasSurge: false,
+    sla: {
+      restaurantId: '121603',
+      deliveryTime: 24,
+      minDeliveryTime: 24,
+      maxDeliveryTime: 24,
+      lastMileTravel: 3,
+      lastMileDistance: 0,
+      serviceability: 'SERVICEABLE',
+      rainMode: 'NONE',
+      longDistance: 'NOT_LONG_DISTANCE',
+      preferentialService: false,
+      iconType: 'EMPTY',
+    },
+    promoted: true,
+    avgRating: '3.9',
+    totalRatings: 10000,
+    new: false,
+  },
+  subtype: 'basic',
+}
+
 const Body = () => {
   return (
     <>
       <div className="body">
         <div className="search">search</div>
         <div className="restaurant-container">
-          <RestaurantCard 
+          {/* <RestaurantCard 
+          // but data erom bhabe ashe toh na 
+          // tai amra actual swiggy theke data tule anbo
             resName = "PB7 foods"   // prop eita 
             cuisine = "Indian,Pizza"  // react ei sobkota props ke ek jayega te joro kore i.e. wrap up kore object r rup e send korbe RestaurantCard component r modhe
           />
           <RestaurantCard 
             resName = "PB117 foods"   
             cuisine = "hui hui"
+          /> */}
+          <RestaurantCard
+          resData = {resObj}
+
+
           />
           
         </div>

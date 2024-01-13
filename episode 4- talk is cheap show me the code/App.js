@@ -93,9 +93,9 @@ const {resName,cuisine} = prop; --< writing this
       {/* destructure korchi bole resName directly likhe data take show korte paarchi */}
       {/* <h3>{props.resData.data.name} </h3>    */}
       <h3>{resData.data.name} </h3>  
-      <h4>{resData.data.cuisines}</h4>
+      <h4>{resData.data.cuisines.join(', ')}</h4>
       <h4>{resData.data.avgRating}</h4>
-      <h4>{resData.data.costForTwo/100}</h4>
+      <h4>₹{resData.data.costForTwo/100} FOR TWO</h4>
       <h4>{resData.data.deliveryTime} minutes</h4>
     </div>
   );

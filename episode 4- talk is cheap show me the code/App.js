@@ -2359,11 +2359,24 @@ const Body = () => {
     </>
   );
 };
+
+const currYear = new Date().getFullYear();
+
+const Footer = () => {
+  return (
+    <footer className="footer">
+      <p>
+        Copyright &copy; {currYear}, Made with 💗 by <strong>Pb7</strong>
+      </p>
+    </footer>
+  );
+};
 const Layout = () => {
   return (
     <>
       <Header />
       <Body />
+      <Footer/>
     </>
   );
 };

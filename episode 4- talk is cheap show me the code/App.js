@@ -23,15 +23,21 @@ const Header = () => {
     </div>
   );
 };
-const RestaurantCard = (prop) => {
-  console.log(prop); // prop ta hocche object ta jeita react pathache ei component e sob kota prop ke ekjayega ene wrap up kore
+const RestaurantCard = (props) => {
+  console.log(props); // prop ta hocche object ta jeita react pathache ei component e sob kota prop ke ekjayega ene wrap up kore
   // const {resName,cuisine} = prop;    
    // destructure kore enechi jate direct 
   //  <h3>{resName}</h3>
   // <h4>{cuisine}</h4>
   //  erom bhabe likhte pari
 
-  const 
+  /*
+
+  
+  */
+
+
+  
   return (
     <div className="res-card" style={{ backgroundColor: "#f0f0f0f0" }}>
       <img
@@ -57,7 +63,7 @@ const {resName,cuisine} = prop; --< writing this
 {/* destructing korei likhte better lagche amar apatoto
  */}
       {/* destructure korchi bole resName directly likhe data take show korte paarchi */}
-      <h3>pb7 fo</h3>   
+      <h3>{props.resData.data.name} </h3>   
       <h4>Indian</h4>
       <h4>4.7 stars</h4>
       <h4>30 minutes</h4>

@@ -25,8 +25,8 @@ const Header = () => {
 };
 const RestaurantCard = (props) => {
   console.log(props); // props ta hocche object ta jeita react pathache ei component e sob kota properties ke ekjayega ene wrap up kore
-  // const {resName,cuisine} = props;    
-   // destructure kore enechi jate direct 
+  // const {resName,cuisine} = props;
+  // destructure kore enechi jate direct
   //  <h3>{resName}</h3>
   // <h4>{cuisine}</h4>
   //  erom bhabe likhte pari
@@ -60,17 +60,16 @@ const RestaurantCard = (props) => {
 
   */
 
+  const { resData } = props;
 
-
-    const {resData} = props;
-
-
-  
   return (
     <div className="res-card" style={{ backgroundColor: "#f0f0f0f0" }}>
       <img
         className="res-logo"
-        src="https://imgstaticcontent.lbb.in/lbbnew/wp-content/uploads/2018/03/08174730/Swiggy.jpg"
+        src={
+          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_264,h_288,c_fill/" +
+          resData.data.cloudinaryImageId
+        }
         alt="res-logo"
       />
       {/* <h3> PB7 foods</h3>
@@ -78,7 +77,7 @@ const RestaurantCard = (props) => {
       <h4>4.7 stars</h4>
       <h4>30 minutes</h4> */}
 
-{/*    without destructure mane hocche without 
+      {/*    without destructure mane hocche without 
 const {resName,cuisine} = prop; --< writing this
 
  */}
@@ -88,47 +87,47 @@ const {resName,cuisine} = prop; --< writing this
       <h4>4.7 stars</h4>
       <h4>30 minutes</h4> */}
 
-{/* destructing korei likhte better lagche amar apatoto
- */}
+      {/* destructing korei likhte better lagche amar apatoto
+       */}
       {/* destructure korchi bole resName directly likhe data take show korte paarchi */}
       {/* <h3>{props.resData.data.name} </h3>    */}
-      <h3>{resData.data.name} </h3>  
-      <h4>{resData.data.cuisines.join(', ')}</h4>
+      <h3>{resData.data.name} </h3>
+      <h4>{resData.data.cuisines.join(", ")}</h4>
       <h4>{resData.data.avgRating}</h4>
-      <h4>₹{resData.data.costForTwo/100} FOR TWO</h4>
+      <h4>₹{resData.data.costForTwo / 100} FOR TWO</h4>
       <h4>{resData.data.deliveryTime} minutes</h4>
     </div>
   );
 };
 
 const resObj = {
-  type: 'restaurant',
+  type: "restaurant",
   data: {
-    type: 'F',
-    id: '121603',
-    name: 'Kannur Food Point',
-    uuid: '51983905-e698-4e31-b0d7-e376eca56320',
-    city: '1',
-    area: 'Tavarekere',
-    totalRatingsString: '10000+ ratings',
-    cloudinaryImageId: 'bmwn4n4bn6n1tcpc8x2h',
-    cuisines: ['Kerala', 'Chinese'],
+    type: "F",
+    id: "121603",
+    name: "Kannur Food Point",
+    uuid: "51983905-e698-4e31-b0d7-e376eca56320",
+    city: "1",
+    area: "Tavarekere",
+    totalRatingsString: "10000+ ratings",
+    cloudinaryImageId: "bmwn4n4bn6n1tcpc8x2h",
+    cuisines: ["Kerala", "Chinese"],
     tags: [],
     costForTwo: 30000,
-    costForTwoString: '₹300 FOR TWO',
+    costForTwoString: "₹300 FOR TWO",
     deliveryTime: 24,
     minDeliveryTime: 24,
     maxDeliveryTime: 24,
-    slaString: '24 MINS',
+    slaString: "24 MINS",
     lastMileTravel: 3,
     slugs: {
-      restaurant: 'kannur-food-point-btm',
-      city: 'bangalore',
+      restaurant: "kannur-food-point-btm",
+      city: "bangalore",
     },
-    cityState: '1',
+    cityState: "1",
     address:
-      '6/21,9TH CROSS ,1ST MAIN, VENKATESHWARA LAYOUT,SG PALYA, BENGALURU, - 560093',
-    locality: 'SG Palya',
+      "6/21,9TH CROSS ,1ST MAIN, VENKATESHWARA LAYOUT,SG PALYA, BENGALURU, - 560093",
+    locality: "SG Palya",
     parentId: 20974,
     unserviceable: false,
     veg: false,
@@ -136,112 +135,112 @@ const resObj = {
     favorite: false,
     tradeCampaignHeaders: [],
     aggregatedDiscountInfo: {
-      header: '50% off',
+      header: "50% off",
       shortDescriptionList: [
         {
-          meta: '50% off on all orders',
-          discountType: 'Percentage',
-          operationType: 'RESTAURANT',
+          meta: "50% off on all orders",
+          discountType: "Percentage",
+          operationType: "RESTAURANT",
         },
       ],
       descriptionList: [
         {
-          meta: '50% off on all orders',
-          discountType: 'Percentage',
-          operationType: 'RESTAURANT',
+          meta: "50% off on all orders",
+          discountType: "Percentage",
+          operationType: "RESTAURANT",
         },
       ],
-      subHeader: '',
+      subHeader: "",
       headerType: 0,
-      superFreedel: '',
+      superFreedel: "",
     },
     aggregatedDiscountInfoV2: {
-      header: '50% OFF',
+      header: "50% OFF",
       shortDescriptionList: [
         {
-          meta: '',
-          discountType: 'Percentage',
-          operationType: 'RESTAURANT',
+          meta: "",
+          discountType: "Percentage",
+          operationType: "RESTAURANT",
         },
       ],
       descriptionList: [
         {
-          meta: '50% off on all orders',
-          discountType: 'Percentage',
-          operationType: 'RESTAURANT',
+          meta: "50% off on all orders",
+          discountType: "Percentage",
+          operationType: "RESTAURANT",
         },
       ],
-      subHeader: '',
+      subHeader: "",
       headerType: 0,
-      superFreedel: '',
+      superFreedel: "",
     },
     ribbon: [
       {
-        type: 'PROMOTED',
+        type: "PROMOTED",
       },
     ],
     chain: [],
     feeDetails: {
       fees: [
         {
-          name: 'distance',
+          name: "distance",
           fee: 3700,
-          message: '',
+          message: "",
         },
         {
-          name: 'time',
+          name: "time",
           fee: 0,
-          message: '',
+          message: "",
         },
         {
-          name: 'special',
+          name: "special",
           fee: 0,
-          message: '',
+          message: "",
         },
       ],
       totalFees: 3700,
-      message: '',
-      title: 'Delivery Charge',
-      amount: '3700',
-      icon: '',
+      message: "",
+      title: "Delivery Charge",
+      amount: "3700",
+      icon: "",
     },
     availability: {
       opened: true,
-      nextOpenMessage: '',
-      nextCloseMessage: '',
+      nextOpenMessage: "",
+      nextCloseMessage: "",
     },
     longDistanceEnabled: 0,
-    rainMode: 'NONE',
+    rainMode: "NONE",
     thirdPartyAddress: false,
-    thirdPartyVendor: '',
-    adTrackingID: 'cid=6274849~p=1~eid=00000187-2c1c-96f0-0062-eea200b00103',
+    thirdPartyVendor: "",
+    adTrackingID: "cid=6274849~p=1~eid=00000187-2c1c-96f0-0062-eea200b00103",
     badges: {
       imageBased: [],
       textBased: [],
       textExtendedBadges: [],
     },
-    lastMileTravelString: '3 kms',
+    lastMileTravelString: "3 kms",
     hasSurge: false,
     sla: {
-      restaurantId: '121603',
+      restaurantId: "121603",
       deliveryTime: 24,
       minDeliveryTime: 24,
       maxDeliveryTime: 24,
       lastMileTravel: 3,
       lastMileDistance: 0,
-      serviceability: 'SERVICEABLE',
-      rainMode: 'NONE',
-      longDistance: 'NOT_LONG_DISTANCE',
+      serviceability: "SERVICEABLE",
+      rainMode: "NONE",
+      longDistance: "NOT_LONG_DISTANCE",
       preferentialService: false,
-      iconType: 'EMPTY',
+      iconType: "EMPTY",
     },
     promoted: true,
-    avgRating: '3.9',
+    avgRating: "3.9",
     totalRatings: 10000,
     new: false,
   },
-  subtype: 'basic',
-}
+  subtype: "basic",
+};
 
 const Body = () => {
   return (
@@ -259,12 +258,7 @@ const Body = () => {
             resName = "PB117 foods"   
             cuisine = "hui hui"
           /> */}
-          <RestaurantCard
-          resData = {resObj}
-
-
-          />
-          
+          <RestaurantCard resData={resObj} />
         </div>
       </div>
     </>
@@ -282,14 +276,9 @@ const Layout = () => {
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(<Layout />);
-   
-
 
 // passsing a prop to a component is same like passing arguments/parameter to a fn
 // prop = properties = parameters that we pass to commponents
-
-
-
 
 /*
   conflict driven ui ---

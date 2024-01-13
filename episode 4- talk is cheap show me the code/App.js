@@ -78,6 +78,10 @@ const RestaurantCard = (props) => {
     <div className="res-card" style={{ backgroundColor: "#f0f0f0f0" }}>
       <img
         className="res-logo"
+        // src={
+        //   "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_264,h_288,c_fill/" +
+        //   resData.data.cloudinaryImageId
+        // }
         src={
           "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_264,h_288,c_fill/" +
           cloudinaryImageId
@@ -103,6 +107,13 @@ const {resName,cuisine} = prop; --< writing this
        */}
       {/* destructure korchi bole resName directly likhe data take show korte paarchi */}
       {/* <h3>{props.resData.data.name} </h3>    */}
+      {/* <h3>{resData.data.name} </h3>
+      <h4>{resData.data.cuisines.join(", ")}</h4>
+      <h4>{resData.data.avgRating} stars</h4>
+      <h4>₹{resData.data.costForTwo / 100} FOR TWO</h4>
+      <h4>{resData.data.deliveryTime} minutes</h4> */}
+
+      {/* after destructing resData we can write like this */}
       <h3>{name} </h3>
       <h4>{cuisines.join(", ")}</h4>
       <h4>{avgRating} stars</h4>

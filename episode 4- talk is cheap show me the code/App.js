@@ -25,7 +25,7 @@ const Header = () => {
 };
 const RestaurantCard = (prop) => {
   console.log(prop); // prop ta hocche object ta jeita react pathache ei component e sob kota prop ke ekjayega ene wrap up kore
-  //const {resName,cuisine} = prop;    
+  const {resName,cuisine} = prop;    
    // destructure kore enechi jate direct 
   //  <h3>{resName}</h3>
   // <h4>{cuisine}</h4>
@@ -42,18 +42,23 @@ const RestaurantCard = (prop) => {
       <h4>4.7 stars</h4>
       <h4>30 minutes</h4> */}
 
-{/*    without de */}
+{/*    without destructure mane hocche without 
+const {resName,cuisine} = prop; --< writing this
+
+ */}
       {/* without destructure erom lage dekh */}
-      <h3>{prop.resName}</h3>
+      {/* <h3>{prop.resName}</h3>
       <h4>{prop.cuisine}</h4>
       <h4>4.7 stars</h4>
-      <h4>30 minutes</h4>
+      <h4>30 minutes</h4> */}
 
+{/* destructing korei likhte better lagche amar apatoto
+ */}
       {/* destructure korchi bole resName directly likhe data take show korte paarchi */}
-      {/* <h3>{resName}</h3>   
+      <h3>{resName}</h3>   
       <h4>{cuisine}</h4>
       <h4>4.7 stars</h4>
-      <h4>30 minutes</h4> */}
+      <h4>30 minutes</h4>
     </div>
   );
 };

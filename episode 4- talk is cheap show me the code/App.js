@@ -30,6 +30,8 @@ const RestaurantCard = (prop) => {
   //  <h3>{resName}</h3>
   // <h4>{cuisine}</h4>
   //  erom bhabe likhte pari
+
+  const 
   return (
     <div className="res-card" style={{ backgroundColor: "#f0f0f0f0" }}>
       <img
@@ -55,8 +57,8 @@ const {resName,cuisine} = prop; --< writing this
 {/* destructing korei likhte better lagche amar apatoto
  */}
       {/* destructure korchi bole resName directly likhe data take show korte paarchi */}
-      <h3>{resName}</h3>   
-      <h4>{cuisine}</h4>
+      <h3>pb7 fo</h3>   
+      <h4>Indian</h4>
       <h4>4.7 stars</h4>
       <h4>30 minutes</h4>
     </div>
@@ -249,3 +251,29 @@ root.render(<Layout />);
 
 // passsing a prop to a component is same like passing arguments/parameter to a fn
 // prop = properties = parameters that we pass to commponents
+
+
+
+
+/*
+  conflict driven ui ---
+
+  sob kota location kolkata banga delhi te alada alada card ache offer r
+  amra toh alada city r jonno alada ui banabo na
+  amader website ta drive kore data i.e. our appn is driven by data
+  tarmane amra ektai ui banabo aar tarpor ui ta change hobe backend theke jerom data asche setar sathe tal miliye 
+  i.e. ei restaurant app e ekta ui banabo 
+  ebar different city r data backend theke jokhun asbe tokhun ui ta serom behave korrbe
+  i.e. ekta user A kolkata te kolkata r ui dekhbe jeitar data backend theke asche
+  serom ei user b hyderabdad te hyderabdad r ui dekhbe jeitar data backend theke asche
+
+
+  Config Driven UI` are based on the configurations of the data application receives. It is rather a good practice to use config driven UIs to make application for dynamic.
+It is a very common & basic approach to interact with the User. It provides a generic interface to develop things which help your project scale well. It saves a lot of development time and effort.
+A typical login form, common in most of the Apps. Most of these forms also get frequent updates as the requirements increase in terms of Form Validations, dropdown options,.. or design changes.
+
+
+
+
+
+*/

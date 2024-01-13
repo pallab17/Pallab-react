@@ -24,7 +24,8 @@ const Header = () => {
   );
 };
 const RestaurantCard = (prop) => {
-  const {resName,cuisine} = prop;
+  console.log(prop); // prop ta hocche object ta jeita react pathache ei component e sob kota prop ke ekjayega ene wrap up kore
+  const {resName,cuisine} = prop;     // 
   return (
     <div className="res-card" style={{ backgroundColor: "#f0f0f0f0" }}>
       <img
@@ -52,7 +53,7 @@ const Body = () => {
         <div className="restaurant-container">
           <RestaurantCard 
             resName = "PB7 foods"   // prop eita 
-            cuisine = "Indian,Pizza"  // react ei sobkota 
+            cuisine = "Indian,Pizza"  // react ei sobkota props ke ek jayega te joro kore i.e. wrap up kore object r rup e send korbe RestaurantCard component r modhe
           />
           <RestaurantCard />
           

@@ -100,6 +100,7 @@ const {resName,cuisine} = prop; --< writing this
   );
 };
 
+// just 1 ta object
 // const resObj = {
 //   type: "restaurant",
 //   data: {
@@ -242,7 +243,7 @@ const {resName,cuisine} = prop; --< writing this
 //   subtype: "basic",
 // };
 
-
+// onek kota object r list/array jeita swiggy r real data swiggy r network tab theke newa
 const resList = [
   {
     type: 'restaurant',
@@ -2303,7 +2304,9 @@ const Body = () => {
             resName = "PB117 foods"   
             cuisine = "hui hui"
           /> */}
-          <RestaurantCard resData={resObj} />
+          {/* <RestaurantCard resData={resObj} /> */}
+         
+          <RestaurantCard resData={resList[0]} />
         </div>
       </div>
     </>

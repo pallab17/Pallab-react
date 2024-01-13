@@ -2342,16 +2342,16 @@ const Body = () => {
           <RestaurantCard resData={resList[10]} /> */}
 
 {/* map = loop korche sob kota element ke in the array and print korche oitake screen e
- element == i jeita amra for loop e use kori
+ (element == array r element gulo) jeita amra for loop e use kori
  Warning: Each child in a list should have a unique "key" prop. -- > ei error ta sorate hole we always have to 
  give individual key to every element while looping
- 
+
 
  react doesnt recommend us to use index as key in map method while looping
 
  */}
           {resList.map((element) => (
-            <RestaurantCard  key={element.data.id}resData={element} />
+            <RestaurantCard  key={element.data.id} resData={element} />
           ))
           }
         </div>

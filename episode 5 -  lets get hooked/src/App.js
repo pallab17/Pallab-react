@@ -1,28 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import Header from "./components/Header";
 
-const Header = () => {
-  return (
-    <div className="header">
-      <div className="app-logo">
-        <img
-          className="logo"
-          src="https://png.pngtree.com/png-clipart/20200727/original/pngtree-restaurant-logo-design-vector-template-png-image_5441058.jpg"
-          alt=""
-        />
-        {/* <h1 className="logo">LOGO</h1> */}
-      </div>
-      <div className="links">
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
-          <li>Cart</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
+
 const RestaurantCard = (props) => {
   console.log(props); // props ta hocche object ta jeita react pathache ei component e sob kota properties ke ekjayega ene wrap up kore
   // const {resName,cuisine} = props;

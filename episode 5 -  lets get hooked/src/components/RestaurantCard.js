@@ -1,12 +1,14 @@
+import { CDN_URL } from "../common/constants";
+
 const RestaurantCard = (props) => {
-    console.log(props); // props ta hocche object ta jeita react pathache ei component e sob kota properties ke ekjayega ene wrap up kore
-    // const {resName,cuisine} = props;
-    // destructure kore enechi jate direct
-    //  <h3>{resName}</h3>
-    // <h4>{cuisine}</h4>
-    //  erom bhabe likhte pari
-  
-    /*
+  console.log(props); // props ta hocche object ta jeita react pathache ei component e sob kota properties ke ekjayega ene wrap up kore
+  // const {resName,cuisine} = props;
+  // destructure kore enechi jate direct
+  //  <h3>{resName}</h3>
+  // <h4>{cuisine}</h4>
+  //  erom bhabe likhte pari
+
+  /*
     imppp 
   
      resData = {resObj}
@@ -34,68 +36,65 @@ const RestaurantCard = (props) => {
   
   
     */
-  
-    const { resData } = props;
-  
-    //  now we will refractor our code
-    //  so again destructing the resData we get
-  
-    const {
-      cloudinaryImageId,
-      name,
-      cuisines,
-      avgRating,
-      costForTwo,
-      deliveryTime,
-    } = resData?.data;
-  
-    return (
-      <div className="res-card" style={{ backgroundColor: "#f0f0f0f0" }}>
-        <img
-          className="res-logo"
-          // src={
-          //   "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_264,h_288,c_fill/" +
-          //   resData.data.cloudinaryImageId
-          // }
-          src={
-            "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_264,h_288,c_fill/" +
-            cloudinaryImageId
-          }
-          alt="res-logo"
-        />
-        {/* <h3> PB7 foods</h3>
+
+  const { resData } = props;
+
+  //  now we will refractor our code
+  //  so again destructing the resData we get
+
+  const {
+    cloudinaryImageId,
+    name,
+    cuisines,
+    avgRating,
+    costForTwo,
+    deliveryTime,
+  } = resData?.data;
+
+  return (
+    <div className="res-card" style={{ backgroundColor: "#f0f0f0f0" }}>
+      <img
+        className="res-logo"
+        // src={
+        //   "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_264,h_288,c_fill/" +
+        //   resData.data.cloudinaryImageId
+        // }
+        src={CDN_URL + cloudinaryImageId}
+        alt="res-logo"
+      />
+      {/* <h3> PB7 foods</h3>
         <h4>Indian,Pizza</h4>
         <h4>4.7 stars</h4>
         <h4>30 minutes</h4> */}
-  
-        {/*    without destructure mane hocche without 
+
+      {/*    without destructure mane hocche without 
   const {resName,cuisine} = prop; --< writing this
   
    */}
-        {/* without destructure erom lage dekh */}
-        {/* <h3>{prop.resName}</h3>
+      {/* without destructure erom lage dekh */}
+      {/* <h3>{prop.resName}</h3>
         <h4>{prop.cuisine}</h4>
         <h4>4.7 stars</h4>
         <h4>30 minutes</h4> */}
-  
-        {/* destructing korei likhte better lagche amar apatoto
-         */}
-        {/* destructure korchi bole resName directly likhe data take show korte paarchi */}
-        {/* <h3>{props.resData.data.name} </h3>    */}
-        {/* <h3>{resData.data.name} </h3>
+
+      {/* destructing korei likhte better lagche amar apatoto
+       */}
+      {/* destructure korchi bole resName directly likhe data take show korte paarchi */}
+      {/* <h3>{props.resData.data.name} </h3>    */}
+      {/* <h3>{resData.data.name} </h3>
         <h4>{resData.data.cuisines.join(", ")}</h4>
         <h4>{resData.data.avgRating} stars</h4>
         <h4>₹{resData.data.costForTwo / 100} FOR TWO</h4>
         <h4>{resData.data.deliveryTime} minutes</h4> */}
-  
-        {/* after destructing resData we can write like this */}
-        <h3>{name} </h3>
-        <h4>{cuisines.join(", ")}</h4>
-        <h4>{avgRating} stars</h4>
-        <h4>₹{costForTwo / 100} FOR TWO</h4>
-        <h4>{deliveryTime} minutes</h4>
-      </div>
-    );
-  };
 
-  export default RestaurantCard;
+      {/* after destructing resData we can write like this */}
+      <h3>{name} </h3>
+      <h4>{cuisines.join(", ")}</h4>
+      <h4>{avgRating} stars</h4>
+      <h4>₹{costForTwo / 100} FOR TWO</h4>
+      <h4>{deliveryTime} minutes</h4>
+    </div>
+  );
+};
+
+export default RestaurantCard;

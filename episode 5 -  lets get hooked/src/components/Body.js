@@ -2,6 +2,46 @@ import RestaurantCard from "./RestaurantCard";
 import resList from "../common/mockdata";
 
 const Body = () => {
+  // swiggy r whole api use na kore just 2-3 te use korchi for understanding hooks
+  const listOfRestaurants = [
+    {
+      type: 'restaurant',
+      data: {
+        id: '334475',
+        name: 'KFC',
+        cloudinaryImageId: 'bdcd233971b7c81bf77e1fa4471280eb',
+        cuisines: ['Burgers', 'Biryani', 'American', 'Snacks', 'Fast Food'],
+        costForTwo: 40000,
+        deliveryTime: 36,
+        avgRating: '3.8',
+      },
+    },
+    {
+      type: 'restaurant',
+      data: {
+        id: '334476',
+        name: 'Dominos',
+        cloudinaryImageId: 'bdcd233971b7c81bf77e1fa4471280eb',
+        cuisines: ['Burgers', 'Biryani', 'American', 'Snacks', 'Fast Food'],
+        costForTwo: 40000,
+        deliveryTime: 36,
+        avgRating: '4.8',
+      },
+    },
+    {
+      type: 'restaurant',
+      data: {
+        id: '334477',
+        name: 'McDonals',
+        cloudinaryImageId: 'bdcd233971b7c81bf77e1fa4471280eb',
+        cuisines: ['Burgers', 'Biryani', 'American', 'Snacks', 'Fast Food'],
+        costForTwo: 40000,
+        deliveryTime: 36,
+        avgRating: '4.2',
+      },
+    },
+  ];
+
   return (
     <>
       <div className="body">
@@ -10,6 +50,8 @@ const Body = () => {
           <button
             className="filter-btn"
             onClick={() => {
+              // ekhane logic ta amake bhabte + likhte hobe 
+              // logic will contain--> je bhai button ta click korle only top rated restaurant screen e dekhabe
               console.log("button clicked");
             }}
           >
@@ -17,7 +59,7 @@ const Body = () => {
           </button>
         </div>
         <div className="restaurant-container">
-          {resList.map((element) => (
+          {listOfRestaurants.map((element) => (
             <RestaurantCard key={element.data.id} resData={element} />
           ))}
         </div>

@@ -1,10 +1,14 @@
+import { LOGO_URL } from "../common/constants";
+// import {Component} from path --> syntax for named-export 
+
+
 const Header = () => {
     return (
       <div className="header">
         <div className="app-logo">
           <img
             className="logo"
-            src="https://png.pngtree.com/png-clipart/20200727/original/pngtree-restaurant-logo-design-vector-template-png-image_5441058.jpg"
+            src={LOGO_URL}
             alt=""
           />
           {/* <h1 className="logo">LOGO</h1> */}

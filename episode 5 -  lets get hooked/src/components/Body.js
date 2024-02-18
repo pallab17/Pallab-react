@@ -98,7 +98,13 @@ const Body = () => {
               //   (r)=>r.data.avgRating>4
               // );
               // console.log(listOfRestaurants);
-              
+              const filteredList = listOfRestaurants.filter(
+                (r)=>r.data.avgRating>4
+                // filteredlist bole ekta var banachi jeitar modhe ami listofRestaurants take update korchi according to their avg rating 
+                
+              );
+              setListOfRestaurants(filteredList); // tarpor ei filteredlist takei pass kore dicchi setlistofrestaurants r modhe such that original list of restuarants ta update hoye jaye when the top rated restaurant button is clicked
+
             }}
           >
             Top Rated Restaurants

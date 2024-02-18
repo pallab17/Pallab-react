@@ -5,7 +5,25 @@ import resList from "../common/mockdata";
 
 const Body = () => {
 
-  const[listOfRestaurants,setListOfRestaurants] = useState(resList);
+  // method 1  - destructured in a single line
+  // const[listOfRestaurants,setListOfRestaurants] = useState(resList);   eita ke onno bahbe o ekha jaye in simple terms 
+
+  // method 2 
+  //  useState() fn ta jehetu ekta array arr provide korche amader so we can write 
+  const arr = useState(resList);
+  // now this array arr contains 2 elements listOfRestaurants,setListOfRestaurants
+  // i.e
+   const listOfRestaurants = arr[0];
+   const setListOfRestaurants = arr[1];
+
+  //  method 3  
+    //  useState() fn ta jehetu ekta array arr provide korche amader so we can write 
+  // const arr = useState(resList);
+  // now this array arr contains 2 elements listOfRestaurants,setListOfRestaurants
+   // const[listOfRestaurants,setListOfRestaurants] = arr;   // destructuring here
+   
+
+
 
 //   const[listOfRestaurants,setListOfRestaurants] = useState([{
 //     type: 'restaurant',

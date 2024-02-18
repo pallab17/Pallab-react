@@ -101,7 +101,7 @@ const Body = () => {
               // );
               // console.log(listOfRestaurants);
               const filteredList = listOfRestaurants.filter(
-                (r)=>r.data.avgRating>4
+                (r)=>r.data.avgRating>4.2
                 // filteredlist bole ekta var banachi jeitar modhe ami listofRestaurants take update korchi according to their avg rating 
                 
               );
@@ -110,6 +110,21 @@ const Body = () => {
             }}
           >
             Top Rated Restaurants
+          </button>
+          <button
+           className="filter-btn"
+           onClick={
+            ()=>{
+              const filteredList = listOfRestaurants.filter(
+                (r)=>r.data.deliveryTime < 20
+              );
+              setListOfRestaurants(filteredList);
+
+            }
+           }
+          >
+          Fast deliveryTime
+            
           </button>
         </div>
         <div className="restaurant-container">

@@ -65,7 +65,7 @@ setListOfRestaurants(json.data.cards[4].card.card.gridElements.infoWithStyle.res
               // );
               // console.log(listOfRestaurants);
               const filteredList = listOfRestaurants.filter(
-                (r)=>r.data.avgRating>4.2
+                (r)=>r.info.avgRating>4.2
                 // filteredlist bole ekta var banachi jeitar modhe ami listofRestaurants take update korchi according to their avg rating 
                 
               );
@@ -80,7 +80,7 @@ setListOfRestaurants(json.data.cards[4].card.card.gridElements.infoWithStyle.res
            onClick={
             ()=>{
               const filteredList = listOfRestaurants.filter(
-                (r)=>r.data.deliveryTime < 20
+                (r)=>r.info.sla.deliveryTime < 20
               );
               setListOfRestaurants(filteredList);
 

@@ -11,15 +11,19 @@ const Body = () => {
   /* useEffect sikhchi 
   useeffecr hook - useeffect();
   import from react as a named import
-  useEffect
+  useEffect(argument1 ,argument2);
+  argument 1 - callback fn jeita execute hoye after the component renders 
+  here body component render howar por ei callback fn ta render hobe
+  argument 2- dependency array
 
 
   */
  useEffect(()=>{
+  fetchData(); // ekta fn banachi jeitar modhe logic likhbo to fetch live data from swiggy
 
  },[]);
 
-
+ co
 
   
   return (

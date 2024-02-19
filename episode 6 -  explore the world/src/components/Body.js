@@ -1,12 +1,12 @@
 import {useState,useEffect} from "react";
 import RestaurantCard from "./RestaurantCard";
-import resList from "../common/mockdata";
+//import resList from "../common/mockdata";
 
 
 const Body = () => {
 
-  
-   const[listOfRestaurants,setListOfRestaurants] = useState([]);   
+  //const[listOfRestaurants,setListOfRestaurants] = useState(resList); we are not using the mock data here as swiggy nijeder api data format change koreche so logic break hocche
+   const[listOfRestaurants,setListOfRestaurants] = useState([]);   // prothome our app doesnt have any web page
 
   /* useEffect sikhchi 
   useeffecr hook - useeffect();
@@ -42,7 +42,7 @@ const Body = () => {
 const json = await data.json();
 
 console.log(json);
-// eibar ami chaichi ei json r modhe new restuarant r data ke take updated data of listofrestaurants baniye di
+// eibar ami chaichi ei json r modhe new restuarant r data r list ke take updated data of listofrestaurants baniye di
 setListOfRestaurants(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
 
    }

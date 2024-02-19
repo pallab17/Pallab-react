@@ -36,12 +36,14 @@ const Body = () => {
 
    const fetchData = async() => {
     const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.51800&lng=88.38320&collection=83647&tags=layout_CCS_Chinese&sortBy=&filters=&type=rcv2&offset=0&page_type=null"
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING#"
     )
 // converting this data to json
 const json = await data.json();
 
 console.log(json);
+// eibar ami chaichi ei json r modhe new restuarant r data ke take updated data of listofrestaurants baniye di
+setListOfRestaurants(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
 
    }
 

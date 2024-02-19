@@ -6,7 +6,7 @@ import resList from "../common/mockdata";
 const Body = () => {
 
   
-   const[listOfRestaurants,setListOfRestaurants] = useState(resList);   
+   const[listOfRestaurants,setListOfRestaurants] = useState([]);   
 
   /* useEffect sikhchi 
   useeffecr hook - useeffect();
@@ -93,7 +93,7 @@ setListOfRestaurants(json.data.cards[4].card.card.gridElements.infoWithStyle.res
         </div>
         <div className="restaurant-container">
           {listOfRestaurants.map((element) => (
-            <RestaurantCard key={element.data.id} resData={element} />
+            <RestaurantCard key={element.info.id} resData={element} />
           ))}
         </div>
       </div>

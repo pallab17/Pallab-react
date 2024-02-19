@@ -38,7 +38,10 @@ const Body = () => {
     const data = await fetch(
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.51800&lng=88.38320&collection=83647&tags=layout_CCS_Chinese&sortBy=&filters=&type=rcv2&offset=0&page_type=null"
     )
-// conve
+// converting this data to json
+const json = await data.json();
+
+console.log(json);
 
    }
 

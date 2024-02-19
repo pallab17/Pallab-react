@@ -23,7 +23,25 @@ const Body = () => {
 
  },[]);
 
- co
+//  const fetchData = () => {
+//   const data = fetch(
+//     "https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.51800&lng=88.38320&collection=83647&tags=layout_CCS_Chinese&sortBy=&filters=&type=rcv2&offset=0&page_type=null"
+//   );
+//   // fetch(); ei fetch fn ta data fetch kore anbe from api - swiggy r api
+//   // and it will return a promise
+//   // so we have to resolve a promise
+//   // method 1 traditional - then method with catch method to handle errors
+//   // method 2 - industry practice - async await function 
+//  }
+
+   const fetchData = async() => {
+    const data = await fetch(
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.51800&lng=88.38320&collection=83647&tags=layout_CCS_Chinese&sortBy=&filters=&type=rcv2&offset=0&page_type=null"
+    )
+// conve
+
+   }
+
 
   
   return (

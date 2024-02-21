@@ -52,10 +52,10 @@ setListOfRestaurants(json.data.cards[4].card.card.gridElements.infoWithStyle.res
 
   //  }
 
-  if(listOfRestaurants.length === 0){
-    return <Shimmer/>;
+  if(listOfRestaurants.length===0){
+    return <h1> loading ...</h1> ;
 
-   }
+  }
 
   
   return (

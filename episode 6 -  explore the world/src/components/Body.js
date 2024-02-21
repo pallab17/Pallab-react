@@ -53,9 +53,10 @@ setListOfRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithSty
 
   //  }
 
+  // conditional rendering - rendering on the basis of a condition -- interview qs
   if(listOfRestaurants.length===0){
     return <Shimmer/> ;
-    
+
 
   }
 

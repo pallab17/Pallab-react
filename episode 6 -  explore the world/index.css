@@ -44,6 +44,8 @@
 }
 .shimmer-container{
     display: flex;
+    flex-wrap: wrap;  
+    /* flex-wrap: wrap;   ei property ta basically hocche je flex wala container r mal guno ekta line e thakbe na multiple line e thakbe */
 }
 .shimmer-card{
     margin: 20px;

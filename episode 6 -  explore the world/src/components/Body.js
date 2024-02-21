@@ -1,5 +1,6 @@
 import {useState,useEffect} from "react";
 import RestaurantCard from "./RestaurantCard";
+import Shimmer from "./Shimmer"
 //import resList from "../common/mockdata";
 
 
@@ -43,7 +44,7 @@ const json = await data.json();
 
 console.log(json);
 // eibar ami chaichi ei json r modhe new restuarant r data r list ke take updated data of listofrestaurants baniye di
-setListOfRestaurants(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
+setListOfRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
 
    }
 
@@ -53,7 +54,8 @@ setListOfRestaurants(json.data.cards[4].card.card.gridElements.infoWithStyle.res
   //  }
 
   if(listOfRestaurants.length===0){
-    return <h1> loading ...</h1> ;
+    return <Shimmer/> ;
+    
 
   }
 

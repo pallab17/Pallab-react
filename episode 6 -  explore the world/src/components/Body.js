@@ -86,7 +86,8 @@ const Body = () => {
                 console.log(searchText);
 
                 const filteredList = listOfRestaurants.filter(
-                  (res) => res.info.name.includes(searchText)
+                  (res) => res.info.name.toLowerCase().includes(searchText.toLowerCase())
+                  // .toLowercase() fn ta use korchi to make the search text insensitive mane je bhabei capital ba small letter e likhi na keno(it will convert the text in small letters both restaurant r naaam aar searched text duto kei lower case e convert kore debe) tarpor it will fetch me results
                   // includes fn ta use korchi jate restaurant r naam r sathe mil pelei sei bujhe listof restaurant show korte pari
                  // whole restaurant name unujai search korte chaile 
                 //  res.info.name === searchedtext condition ta use korlei hobe

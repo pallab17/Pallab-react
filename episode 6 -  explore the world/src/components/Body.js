@@ -72,7 +72,7 @@ const Body = () => {
               className="search-box"
               value={searchText}
               onChange={(e) => {
-                setsearchText(e.target.value);   // onchange fn take use kore user je text ta likhche seitake ami state variable (e update kore) e store kore rakhchi
+                setsearchText(e.target.value); // onchange fn take use kore user je text ta likhche seitake ami state variable (e update kore) e store kore rakhchi
               }}
             />
             <button
@@ -83,7 +83,15 @@ const Body = () => {
                 // input r modhe value function ta use korbo
                 // aar oi value fn r bhetore amra ekta state variable debo
                 // such that oi state variable ta track rakhte parbe what value is provided and what change is required according to the written text
-             console.log(searchText);
+                console.log(searchText);
+
+               const filteredList= listOfRestaurants.filter((res) =>
+                  res.info.name.includes(searchText)
+                );
+                
+
+
+
               }}
             >
               Search

@@ -7,6 +7,11 @@ const Body = () => {
   //const[listOfRestaurants,setListOfRestaurants] = useState(resList); we are not using the mock data here as swiggy nijeder api data format change koreche so logic break hocche
   const [listOfRestaurants, setListOfRestaurants] = useState([]); // prothome our app doesnt have any restaurant list
 
+  // making a copy of the original list of restuarants
+  const [filteredlistOfRestaurants, setfilteredlistOfRestaurants] = useState(
+    []
+  );
+
   const [searchText, setsearchText] = useState("");
 
   /* useEffect sikhchi 
@@ -46,6 +51,11 @@ const Body = () => {
     setListOfRestaurants(
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
+    // amra copy/duplicate list ta toiri korlam
+    setfilteredlistOfRestaurants(
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+
   };
 
   //  if(listOfRestaurants.length === 0){
@@ -86,14 +96,17 @@ const Body = () => {
                 console.log(searchText);
 
                 const filteredList = listOfRestaurants.filter(
-                  (res) => res.info.name.toLowerCase().includes(searchText.toLowerCase())
+                  (res) =>
+                    res.info.name
+                      .toLowerCase()
+                      .includes(searchText.toLowerCase())
                   // .toLowercase() fn ta use korchi to make the search text insensitive mane je bhabei capital ba small letter e likhi na keno(it will convert the text in small letters both restaurant r naaam aar searched text duto kei lower case e convert kore debe) tarpor it will fetch me results
                   // includes fn ta use korchi jate restaurant r naam r sathe mil pelei sei bujhe listof restaurant show korte pari
-                 // whole restaurant name unujai search korte chaile 
-                //  res.info.name === searchedtext condition ta use korlei hobe
+                  // whole restaurant name unujai search korte chaile
+                  //  res.info.name === searchedtext condition ta use korlei hobe
                   // user je text ta search korche seita jodi kono restaurant r naam r sathe mil paye tahole list of restuarant take update kore screen e render korbo using setlistofrestaurants fn
                 );
-                setListOfRestaurants(filteredList);
+                setfilteredlistOfRestaurants(filteredList);
               }}
             >
               Search
@@ -113,7 +126,7 @@ const Body = () => {
                 (r) => r.info.avgRating > 4.2
                 // filteredlist bole ekta var banachi jeitar modhe ami listofRestaurants take update korchi according to their avg rating
               );
-              setListOfRestaurants(filteredList); // tarpor ei filteredlist takei pass kore dicchi setlistofrestaurants r modhe such that original list of restuarants ta update hoye jaye when the top rated restaurant button is clicked
+              setfilteredlistOfRestaurants(filteredList); // tarpor ei filteredlist takei pass kore dicchi setlistofrestaurants r modhe such that original list of restuarants ta update hoye jaye when the top rated restaurant button is clicked
             }}
           >
             Top Rated Restaurants
@@ -124,14 +137,14 @@ const Body = () => {
               const filteredList = listOfRestaurants.filter(
                 (r) => r.info.sla.deliveryTime < 20
               );
-              setListOfRestaurants(filteredList);
+              setfilteredlistOfRestaurants(filteredList);
             }}
           >
             Fast deliveryTime
           </button>
         </div>
         <div className="restaurant-container">
-          {listOfRestaurants.map((element) => (
+          {filteredlistOfRestaurants.map((element) => (
             <RestaurantCard key={element.info.id} resData={element} />
           ))}
         </div>
@@ -141,3 +154,11 @@ const Body = () => {
 };
 
 export default Body;
+
+/* there is a problem that is jokhun user ekta search korche 
+seitar basis e amra original list of restaurant r list take update korchi
+tai jonno we are filtering the original list and we are losing the original restaurant r list 
+
+to fix this amader ekta copy of original list banate hobe
+
+*/

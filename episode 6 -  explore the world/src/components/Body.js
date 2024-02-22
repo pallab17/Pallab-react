@@ -85,13 +85,14 @@ const Body = () => {
                 // such that oi state variable ta track rakhte parbe what value is provided and what change is required according to the written text
                 console.log(searchText);
 
-               const filteredList= listOfRestaurants.filter((res) =>
-                  res.info.name.includes(searchText)
+                const filteredList = listOfRestaurants.filter(
+                  (res) => res.info.name.includes(searchText)
+                  // includes fn ta use korchi jate restaurant r naam r sathe mil pelei sei bujhe listof restaurant show korte pari
+                 // whole restaurant name unujai search korte chaile 
+                //  res.info.name === searchedtext condition ta use korlei hobe
+                  // user je text ta search korche seita jodi kono restaurant r naam r sathe mil paye tahole list of restuarant take update kore screen e render korbo using setlistofrestaurants fn
                 );
-                
-
-
-
+                setListOfRestaurants(filteredList);
               }}
             >
               Search

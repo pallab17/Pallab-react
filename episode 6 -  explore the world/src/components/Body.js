@@ -5,7 +5,9 @@ import Shimmer from "./Shimmer";
 
 const Body = () => {
   //const[listOfRestaurants,setListOfRestaurants] = useState(resList); we are not using the mock data here as swiggy nijeder api data format change koreche so logic break hocche
-  const [listOfRestaurants, setListOfRestaurants] = useState([]); // prothome our app doesnt have any web page
+  const [listOfRestaurants, setListOfRestaurants] = useState([]); // prothome our app doesnt have any restaurant list
+
+  
 
   /* useEffect sikhchi 
   useeffecr hook - useeffect();

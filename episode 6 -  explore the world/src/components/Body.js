@@ -162,4 +162,13 @@ to fix this amader ekta copy of original list banate hobe
 tarpor basically amra originallistof restaurants e search korbo filter o korbo
 kintu duplicate/copy list tate update kore oi duplicate/copy wala updated list of restaurants ke screen e render/show korbo
 
+
+
+
+the most important concept in this lecture 6 is 
+whenever a state variable is fucking getting updated react re renders the component
+
+jokhun amra just ekta character/input text likhchi that is c for example tokhun ei react is re-rendering the componenet
+that is cafe word ta search korchi jokhun total 4 bar react re-render korche component take
+
 */

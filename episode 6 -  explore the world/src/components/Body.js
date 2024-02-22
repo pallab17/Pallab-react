@@ -7,7 +7,7 @@ const Body = () => {
   //const[listOfRestaurants,setListOfRestaurants] = useState(resList); we are not using the mock data here as swiggy nijeder api data format change koreche so logic break hocche
   const [listOfRestaurants, setListOfRestaurants] = useState([]); // prothome our app doesnt have any restaurant list
 
-  
+
 
   /* useEffect sikhchi 
   useeffecr hook - useeffect();
@@ -67,8 +67,19 @@ const Body = () => {
         {/* <div className="search">search</div> */}
         <div className="filter">
         <div className="search">
-        <input type="text" className="search-box" />
-        <button>Search</button>
+        <input type="text" className="search-box"  />
+        <button
+        onClick={()=>{
+          // ei search btn ta click hole i want to show the user what the user want to see according to their searched text
+          // search  text unujai filter marbo
+          // so i need to track the searched text to do this we need
+          // input r modhe value function ta use korbo
+          // aar oi value fn r bhetore amra ekta state variable debo
+          // such that oi state variable ta track rakhte parbe what value is provided and what change is required according to the written text
+
+
+        }}
+        >Search</button>
         
         </div>
           <button

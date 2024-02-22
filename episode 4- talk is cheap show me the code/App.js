@@ -2389,7 +2389,7 @@ root.render(<Layout />);
 // prop = properties = parameters that we pass to commponents
 
 /*
-  conflict driven ui ---
+  config driven ui ---
 
   sob kota location kolkata banga delhi te alada alada card ache offer r
   amra toh alada city r jonno alada ui banabo na

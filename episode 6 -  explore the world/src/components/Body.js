@@ -55,7 +55,6 @@ const Body = () => {
     setfilteredlistOfRestaurants(
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
-
   };
 
   //  if(listOfRestaurants.length === 0){
@@ -159,6 +158,8 @@ export default Body;
 seitar basis e amra original list of restaurant r list take update korchi
 tai jonno we are filtering the original list and we are losing the original restaurant r list 
 
-to fix this amader ekta copy of original list banate hobe
+to fix this amader ekta copy of original list banate hobe 
+tarpor basically amra originallistof restaurants e search korbo filter o korbo
+kintu duplicate/copy list tate update kore oi duplicate/copy wala updated list of restaurants ke screen e render/show korbo
 
 */

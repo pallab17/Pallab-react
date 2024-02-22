@@ -1,8 +1,12 @@
 import { LOGO_URL } from "../common/constants";
+import { useState } from "react";
 // import {Component} from path --> syntax for named-export 
 
 
 const Header = () => {
+
+  const[loginbutton,setloginbutton]=useState("Login");
+
 
     return (
       <div className="header">
@@ -20,7 +24,9 @@ const Header = () => {
             <li>About</li>
             <li>Contact</li>
             <li>Cart</li>
-            <button className="but">Login</button>
+            <button className="but" onClick={()=>{
+              setloginbutton("Logout");
+             }}>{loginbutton}</button>
           </ul>
         </div>
       </div>

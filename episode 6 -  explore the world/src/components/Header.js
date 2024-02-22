@@ -3,6 +3,7 @@ import { LOGO_URL } from "../common/constants";
 
 
 const Header = () => {
+
     return (
       <div className="header">
         <div className="app-logo">
@@ -19,6 +20,7 @@ const Header = () => {
             <li>About</li>
             <li>Contact</li>
             <li>Cart</li>
+            <button className="but">Login</button>
           </ul>
         </div>
       </div>

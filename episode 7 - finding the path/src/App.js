@@ -45,6 +45,10 @@ const appRouter = createBrowserRouter([
     path: "/about",
     element : <About/>
 
+  },
+  {
+    path : "/contact",
+    element : <Contact/>,
   }
 ]);
 
@@ -55,5 +59,9 @@ const appRouter = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 // root.render(<Layout />);
+
+// tarpor jehetu RouterProvider r kache puro congiguration ta ache tai otai amra pass korchi (with our own made configuration stored inside appRouter)  root e 
+// jate RouterProvider ei home-screen e render hoye with our made configuration
+// configuration === kon page e kon component render hobe
 root.render(<RouterProvider router={appRouter} />);
 

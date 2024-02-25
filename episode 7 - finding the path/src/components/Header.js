@@ -1,9 +1,11 @@
 import { LOGO_URL } from "../common/constants";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 // import {Component} from path --> syntax for named-export
 
 const Header = () => {
   const [loginbutton, setloginbutton] = useState("Login");
+
+  console.log("header component called");
   /*
   jokhun ei ami login button ta click korchi tokhun setloginbutton fn ta loginbutton r  value take logout e change korche 
   and jokhun ei state variable r function ta call hocche , value update hocche tokhun ei react ei gota component take render(show/present/user ke screen dekhano) korche with updated values.

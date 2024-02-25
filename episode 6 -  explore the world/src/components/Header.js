@@ -4,7 +4,7 @@ import { useState,useEffect } from "react";
 
 const Header = () => {
   const [loginbutton, setloginbutton] = useState("Login");
-  console.log("header component called");
+ 
 
   /*
   jokhun ei ami login button ta click korchi tokhun setloginbutton fn ta loginbutton r  value take logout e change korche 
@@ -17,26 +17,7 @@ const Header = () => {
   */
 
 
-  /* 
-  aar ektu knowledge about useeffect hook
-
-  // * if no dependency array => useEffect is called on every component render of the component
-  // * if the dependency array is empty => useEffect is called only on the initial render(just once) of the component
-  // * if the dependency array contains a dependency => useEffect is called everytime the value of the depencecy changes
-  // * Dependency: A dependency can be a state variable (or) a function
-
-  // useEffect(() => {
-  //   console.log(`useEffect Called`);
-  // }, [btnNameReact]);
   
-  
-  */
-
-  useEffect(() => {
-    console.log(`useEffect Called`);
-  },[loginbutton]);
-  
-
   
 
   return (

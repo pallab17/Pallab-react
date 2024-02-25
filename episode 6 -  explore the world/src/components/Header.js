@@ -14,6 +14,22 @@ const Header = () => {
   and tarpor re-render hoye ei duplicate set variable ta with updated value.
   */
 
+
+  /* 
+  aar ektu knowledge about useeffect hook
+
+  // * if no dependency array => useEffect is called on every component render of the component
+  // * if the dependency array is empty => useEffect is called only on the initial render(just once) of the component
+  // * if the dependency array contains a dependency => useEffect is called everytime the value of the depencecy changes
+  // * Dependency: A dependency can be a state variable (or) a function
+
+  // useEffect(() => {
+  //   console.log(`useEffect Called`);
+  // }, [btnNameReact]);
+  
+  
+  */
+
   return (
     <div className="header">
       <div className="app-logo">

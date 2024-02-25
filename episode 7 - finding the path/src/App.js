@@ -35,6 +35,10 @@ const Layout = () => {
       {/* <Outlet/> outlet hocche sei fn ta basically help kore amader 
       outlet r jayega te onno component ke bosiye dite according to the url 
       eg 
+      1.   page = / thakle home pg so  prothome outlet component r jayega te body component swap hoye chole asbe tarpor screen e  header r por body component load hobe
+      2.   page = /about thakle about pg so  prothome outlet component r jayega te about component swap hoye chole asbe tarpor screen e  header r por about component load hobe
+      3.   page = /contact thakle contact pg so  prothome outlet component r jayega te contact component swap hoye chole asbe tarpor screen e  header r por contact component load hobe
+
        */}
 
       <Footer/>

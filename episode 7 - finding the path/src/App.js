@@ -40,7 +40,8 @@ const Layout = () => {
 const appRouter = createBrowserRouter([
   {
     path: "/",
-    element : <Layout/>
+    element : <Layout/>,
+    errorElement: <Error/>,
   },
   {
     path: "/about",
@@ -48,9 +49,9 @@ const appRouter = createBrowserRouter([
 
   },
   {
-    path : "/contact",
+    path: "/contact",
     element : <Contact/>,
-  }
+  },
 ]);
 
 

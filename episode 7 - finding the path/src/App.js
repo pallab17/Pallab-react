@@ -42,7 +42,8 @@ const appRouter = createBrowserRouter([
   {
     path: "/",
     element : <Layout/>,
-    errorElement: <Error/>,
+    errorElement: <Error/>, 
+    // errorElement: <Error/>,  user kono ulto palta url khulte chaile ei error component ta screen e render hobe
   },
   {
     path: "/about",

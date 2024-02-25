@@ -32,6 +32,8 @@ const Layout = () => {
   );
 };
 
+const appRouter = createBrowserRouter([]);
+
 
 
 

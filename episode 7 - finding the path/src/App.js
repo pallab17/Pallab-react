@@ -32,7 +32,17 @@ const Layout = () => {
   );
 };
 
-const appRouter = createBrowserRouter([]);
+const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element : <Layout/>
+  },
+  {
+    path: "/about",
+    element : <About/>
+
+  }
+]);
 
 
 

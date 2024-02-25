@@ -5,7 +5,7 @@ import Body from "./components/Body";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
-import { createBrowserRouter , RouterProvider } from "react-router-dom";
+import { createBrowserRouter , RouterProvider ,Outlet } from "react-router-dom";
 
 
 
@@ -29,7 +29,14 @@ const Layout = () => {
   return (
     <>
       <Header />
-      <Body />
+      {/* <Body /> */}
+
+      <Outlet/>
+      {/* <Outlet/> outlet hocche sei fn ta basically help kore amader 
+      outlet r jayega te onno component ke bosiye dite according to the url 
+      eg 
+       */}
+
       <Footer/>
     </>
   );
@@ -38,22 +45,54 @@ const Layout = () => {
 //  eita hocche congiguration ta 
 // but ei configuration ta amake karur hate tule dite hobe
 //  ei configuration ta amra RouterProvider r hate tule debo tarpor RouterProvider ei configuration ta niye screen e render korbe jerom configuration e lekha ache
+// const appRouter = createBrowserRouter([
+//   {
+//     path: "/",
+//     element : <Layout/>,
+//     errorElement: <Error/>, 
+//     // errorElement: <Error/>,  user kono ulto palta url khulte chaile ei error component ta screen e render hobe
+//   },
+//   {
+//     path: "/about",
+//     element : <About/>
+
+//   },
+//   {
+//     path: "/contact",
+//     element : <Contact/>,
+//   },
+// ]);
+
+// children route concept ta banabo that is header component ta fixed thakbe tarpor url unujai component load hobe
+//  that is header sob kota page r oporei thakbe 
+//  kintu page = / thakle home pg so header r por body component load hobe
+//  kintu page = /about thakle about pg so header r por about component load hobe
+//  kintu page = /contact thakle contact pg so header r por contact component load hobe
 const appRouter = createBrowserRouter([
   {
     path: "/",
     element : <Layout/>,
+    children : [
+      {
+        path: "/",
+        element : <Body/>
+    
+      },
+      {
+        path: "/about",
+        element : <About/>
+    
+      },
+      {
+        path: "/contact",
+        element : <Contact/>,
+      },
+      
+    ],
     errorElement: <Error/>, 
     // errorElement: <Error/>,  user kono ulto palta url khulte chaile ei error component ta screen e render hobe
-  },
-  {
-    path: "/about",
-    element : <About/>
-
-  },
-  {
-    path: "/contact",
-    element : <Contact/>,
-  },
+  }
+ 
 ]);
 
 

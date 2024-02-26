@@ -46,7 +46,13 @@ const Header = () => {
       <div className="links">
         <ul>
           <li>Home</li>
-          <li>About</li>
+          <li>
+          <a href="/about">
+          About 
+
+          </a>
+          
+          </li>
           <li>Contact</li>
           <li>Cart</li>
           <button

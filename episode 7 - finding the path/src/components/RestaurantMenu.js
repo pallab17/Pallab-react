@@ -1,16 +1,22 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import Shimmer from "./Shimmer";
 
 const RestaurantMenu = () => {
   const [resInfo, setresInfo] = useState(null);
+
+  const {resId} = useParams();
+  // useParams() fn ta basically amader restaurant id ta store korte help kore jei id ta url r pashe screen e render hocche 
+
+
   useEffect(() => {
     fetchMenu();
   }, []);
 
   const fetchMenu = async () => {
     const data = await fetch(
-      "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=5934&catalog_qa=undefined&submitAction=ENTER#"
+      "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=426776&catalog_qa=undefined&submitAction=ENTER#"
     );
 
     const json = await data.json();
@@ -35,17 +41,22 @@ const RestaurantMenu = () => {
       <h2>{cuisines.join(", ")}</h2>
       <h3>{costForTwoMessage}</h3>
       <ul>
-      {/* map() */}
-        {itemCards.map((p)=>(
+        {/* map() fn uses callback fn
+      i.e.syntax of callbcak fn  () => ()
+       */}
+
+        {/* arrow fn r syntax hocche
+              ()=>{}
+        */}
+        {itemCards.map((p) => (
           <li key={p.card.info.id}>
             {p.card.info.name} - {" Rs."}
-            {p.card.info.price/100}
+            {p.card.info.price / 100}
           </li>
         ))}
         {/* <li>{itemCards[0].card.info.name}</li>
         <li>{itemCards[1].card.info.name}</li>
         <li>{itemCards[2].card.info.name}</li> */}
-        
       </ul>
     </div>
   );

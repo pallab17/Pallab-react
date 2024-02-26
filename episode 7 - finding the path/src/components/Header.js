@@ -46,14 +46,20 @@ const Header = () => {
         <ul>
           <li>Home</li>
           <li>
-            <a href="/about">About</a>    
+          <Link to="/about">Contact</Link>
+            {/* <a href="/about">About</a> */}
             {/* <a href="/about">About</a>    one way to create a route/rasta to about page
             i.e. About e click hole about page e niye jabe ei anchor tag ta href r sathe mixed hoye
             but problem ta hocche je reload hocche gota page ta that we dont want
-            so we will use links react-router-dom has provided us
+            so we will use links react-router-dom has provided us which ony refreshes the component
+
+            thats why it is called single page applications spa --> all the routing is just about component exchanging themselves 
              */}
+
           </li>
-          <li>Contact</li>
+          <li>
+            <Link to="/contact">Contact</Link>
+          </li>
           <li>Cart</li>
           <button
             className="but"

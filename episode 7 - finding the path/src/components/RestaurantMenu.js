@@ -6,7 +6,7 @@ const RestaurantMenu = () => {
   const [resInfo, setresInfo] = useState(null);
   useEffect(() => {
     fetchMenu();
-  },[]);
+  }, []);
 
   const fetchMenu = async () => {
     const data = await fetch(
@@ -18,18 +18,16 @@ const RestaurantMenu = () => {
     console.log(json);
     setresInfo(json);
   };
- 
-  if( resInfo === null ){
-    return <Shimmer/>;
+
+  if (resInfo === null) {
+    return <Shimmer />;
   }
 
+  const { name, cuisines, costForTwoMessage } =
+    resInfo?.data?.cards[2]?.card?.card?.info;
 
-  const {name,cuisines,costForTwoMessage} = resInfo?.data?.cards[2]?.card?.card?.info;
-
-
-  const {itemCards} = resInfo.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[1].card.card.itemCards
-  
-    
+  const { itemCards } =
+    resInfo.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[1].card.card;
 
   return (
     <div className="menu">
@@ -37,9 +35,16 @@ const RestaurantMenu = () => {
       <h2>{cuisines.join(", ")}</h2>
       <h3>{costForTwoMessage}</h3>
       <ul>
-        <li>momo</li>
-        <li>chips</li>
-        <li>biryani</li>
+        {/* {itemCards.map((p) => (
+          <li>
+            {p.card.info.name} -{"Rs"}
+            {p.card.info.price / 100}
+          </li>
+        ))} */}
+        <li>{itemCards[0].card.info.name}</li>
+        <li>{itemCards[1].card.info.name}</li>
+        <li>{itemCards[2].card.info.name}</li>
+        
       </ul>
     </div>
   );

@@ -35,6 +35,8 @@ const RestaurantMenu = () => {
   const { itemCards } =
   resInfo.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[3].card.card;
 
+  const {price} = itemCards[0].card.info;
+
   
 
   return (
@@ -53,7 +55,7 @@ const RestaurantMenu = () => {
         {itemCards.map((p) => (
           <li key={p.card.info.id}>
             {p.card.info.name} - {" Rs."}
-            {p.card.price}
+            {price}
           </li>
         ))}
         {/* <li>{itemCards[0].card.info.name}</li>

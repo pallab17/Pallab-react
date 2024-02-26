@@ -1,6 +1,18 @@
 import React from 'react'
+import { useEffect } from 'react';
 
 const RestaurantMenu = () => {
+    useEffect(()=>{
+        fetchMenu();
+
+    },[]);
+
+    const fetchMenu = async ()=>{
+        const data =  await fetch();
+        
+        const json = await data.json();
+        
+    }
   return (
     <div className='menu'>
     <h1>name of rest</h1>

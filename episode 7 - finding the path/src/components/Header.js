@@ -1,11 +1,12 @@
 import { LOGO_URL } from "../common/constants";
-import { useState,useEffect } from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 // import {Component} from path --> syntax for named-export
 
 const Header = () => {
   const [loginbutton, setloginbutton] = useState("Login");
 
-  console.log("header component called");
+  // console.log("header component called");
   /*
   jokhun ei ami login button ta click korchi tokhun setloginbutton fn ta loginbutton r  value take logout e change korche 
   and jokhun ei state variable r function ta call hocche , value update hocche tokhun ei react ei gota component take render(show/present/user ke screen dekhano) korche with updated values.
@@ -31,11 +32,9 @@ const Header = () => {
   
   */
 
-  useEffect(() => {
-    console.log(`useEffect Called`);
-  },[loginbutton]);
-  
-
+  // useEffect(() => {
+  //   console.log(`useEffect Called`);
+  // }, [loginbutton]);
 
   return (
     <div className="header">
@@ -47,11 +46,12 @@ const Header = () => {
         <ul>
           <li>Home</li>
           <li>
-          <a href="/about">
-          About 
-
-          </a>
-          
+            <a href="/about">About</a>    
+            {/* <a href="/about">About</a>    one way to create a route/rasta to about page
+            i.e. About e click hole about page e niye jabe ei anchor tag ta href r sathe mixed hoye
+            but problem ta hocche je reload hocche gota page ta that we dont want
+            so we will use links react-router-dom has provided us
+             */}
           </li>
           <li>Contact</li>
           <li>Cart</li>

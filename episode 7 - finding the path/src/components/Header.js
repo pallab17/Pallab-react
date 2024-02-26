@@ -39,14 +39,19 @@ const Header = () => {
   return (
     <div className="header">
       <div className="app-logo">
+        <Link to="/">
+
         <img className="logo" src={LOGO_URL} alt="" />
+        </Link>
         {/* <h1 className="logo">LOGO</h1> */}
       </div>
       <div className="links">
         <ul>
-          <li>Home</li>
           <li>
-          <Link to="/about">Contact</Link>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
             {/* <a href="/about">About</a> */}
             {/* <a href="/about">About</a>    one way to create a route/rasta to about page
             i.e. About e click hole about page e niye jabe ei anchor tag ta href r sathe mixed hoye
@@ -55,7 +60,6 @@ const Header = () => {
 
             thats why it is called single page applications spa --> all the routing is just about component exchanging themselves 
              */}
-
           </li>
           <li>
             <Link to="/contact">Contact</Link>

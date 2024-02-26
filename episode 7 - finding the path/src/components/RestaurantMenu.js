@@ -6,9 +6,8 @@ import Shimmer from "./Shimmer";
 const RestaurantMenu = () => {
   const [resInfo, setresInfo] = useState(null);
 
-  const {resId} = useParams();
-  // useParams() fn ta basically amader restaurant id ta store korte help kore jei id ta url r pashe screen e render hocche 
-
+  const { resId } = useParams();
+  // useParams() fn ta basically amader restaurant id ta store korte help kore jei id ta url r pashe screen e render hocche
 
   useEffect(() => {
     fetchMenu();
@@ -16,7 +15,9 @@ const RestaurantMenu = () => {
 
   const fetchMenu = async () => {
     const data = await fetch(
-      "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=426776&catalog_qa=undefined&submitAction=ENTER#"
+ +
+        resId 
+      
     );
 
     const json = await data.json();

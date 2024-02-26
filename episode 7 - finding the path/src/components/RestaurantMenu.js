@@ -7,6 +7,7 @@ const RestaurantMenu = () => {
   const [resInfo, setresInfo] = useState(null);
 
   const { resId } = useParams();
+  console.log(resId);
   // useParams() fn ta basically amader restaurant id ta store korte help kore jei id ta url r pashe screen e render hocche
 
   useEffect(() => {
@@ -15,9 +16,7 @@ const RestaurantMenu = () => {
 
   const fetchMenu = async () => {
     const data = await fetch(
- +
-        resId 
-      
+      "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=22.572646&lng=88.36389500000001&restaurantId=341240&catalog_qa=undefined&submitAction=ENTER"
     );
 
     const json = await data.json();
@@ -34,7 +33,9 @@ const RestaurantMenu = () => {
     resInfo?.data?.cards[2]?.card?.card?.info;
 
   const { itemCards } =
-    resInfo.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[1].card.card;
+  resInfo.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[3].card.card;
+
+  
 
   return (
     <div className="menu">
@@ -52,7 +53,7 @@ const RestaurantMenu = () => {
         {itemCards.map((p) => (
           <li key={p.card.info.id}>
             {p.card.info.name} - {" Rs."}
-            {p.card.info.price / 100}
+            {p.card.price}
           </li>
         ))}
         {/* <li>{itemCards[0].card.info.name}</li>

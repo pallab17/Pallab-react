@@ -5,7 +5,12 @@ import { MENU_API } from "../common/constants";
 import Shimmer from "./Shimmer";
 
 const RestaurantMenu = () => {
-  const { resId } = useParams();
+  // const params = useParams();
+  // const {resID} = params;
+  // console.log(resID);
+  // console.log(params);
+  const { resID } = useParams();
+  console.log(resID);
   const [resInfo, setresInfo] = useState(null);
 
   // console.log(resId);
@@ -16,10 +21,15 @@ const RestaurantMenu = () => {
   }, []);
 
   // 651011
+  // 692058
 
   const fetchMenu = async () => {
     const data = await fetch(
-      MENU_API + resId + "&catalog_qa=undefined&submitAction=ENTER"
+      "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=" +
+        resID +
+        "&catalog_qa=undefined&submitAction=ENTER"
+
+      // MENU_API + resId + "&catalog_qa=undefined&submitAction=ENTER"
     );
 
     const json = await data.json();
@@ -32,19 +42,22 @@ const RestaurantMenu = () => {
     return <Shimmer />;
   }
 
-  // const { name, cuisines, costForTwoMessage } =
-  //   resInfo?.data?.cards[2]?.card?.card?.info;
+  const { name, cuisines, costForTwoMessage } =
+    resInfo?.data?.cards[2]?.card?.card?.info;
 
-  // const { itemCards } =
-  //   resInfo.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[2].card.card;
+  const { itemCards } =
+    resInfo?.data.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
 
-  // const { defaultPrice } = itemCards[0].card.info;
+    console.log(itemCards);
+    // data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.itemCards
+
+  // const { defaultPrice, price } = itemCards?.card?.info;
 
   return (
     <div className="menu">
-      <h1>{resInfo?.data?.cards[2]?.card?.card?.info.name}</h1>
-      <h2>{resInfo?.data?.cards[2]?.card?.card?.info.cuisines.join(", ")}</h2>
-      <h3>{resInfo?.data?.cards[2]?.card?.card?.info.costForTwoMessage}</h3>
+      <h1>{name}</h1>
+      <h2>{cuisines.join(", ")}</h2>
+      <h3>{costForTwoMessage}</h3>
       <ul>
         {/* map() fn uses callback fn
       i.e.syntax of callbcak fn  () => ()
@@ -53,10 +66,10 @@ const RestaurantMenu = () => {
         {/* arrow fn r syntax hocche
               ()=>{}
         */}
-        {resInfo.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.itemCards.map((p) => (
+        {itemCards?.map((p) => (
           <li key={p.card.info.id}>
             {p.card.info.name} - {" Rs."}
-            {defaultPrice}
+            {p.card.info.defaultPrice || p.card.info.price}
           </li>
         ))}
         {/* <li>{itemCards[0].card.info.name}</li>

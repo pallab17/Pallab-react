@@ -25,9 +25,8 @@ const RestaurantMenu = () => {
 
   const fetchMenu = async () => {
     const data = await fetch(
-       +
-        resID +
-        "&catalog_qa=undefined&submitAction=ENTER"
+      MENU_API + resID 
+      // + "&catalog_qa=undefined&submitAction=ENTER"
 
       // MENU_API + resId + "&catalog_qa=undefined&submitAction=ENTER"
     );
@@ -46,10 +45,11 @@ const RestaurantMenu = () => {
     resInfo?.data?.cards[2]?.card?.card?.info;
 
   const { itemCards } =
-    resInfo?.data.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
+    resInfo?.data.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
+      ?.card;
 
-    console.log(itemCards);
-    // data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.itemCards
+  console.log(itemCards);
+  // data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.itemCards
 
   // const { defaultPrice, price } = itemCards?.card?.info;
 

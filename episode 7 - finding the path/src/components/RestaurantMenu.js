@@ -5,9 +5,9 @@ import { MENU_API } from "../common/constants";
 import Shimmer from "./Shimmer";
 
 const RestaurantMenu = () => {
+  const { resId } = useParams();
   const [resInfo, setresInfo] = useState(null);
 
-  const { resId } = useParams();
   // console.log(resId);
   // useParams() fn ta basically amader restaurant id ta store korte help kore jei id ta url r pashe screen e render hocche
 
@@ -19,9 +19,7 @@ const RestaurantMenu = () => {
 
   const fetchMenu = async () => {
     const data = await fetch(
-       +
-        resId +
-        "&catalog_qa=undefined&submitAction=ENTER"
+      MENU_API + resId + "&catalog_qa=undefined&submitAction=ENTER"
     );
 
     const json = await data.json();
@@ -34,19 +32,19 @@ const RestaurantMenu = () => {
     return <Shimmer />;
   }
 
-  const { name, cuisines, costForTwoMessage } =
-    resInfo?.data?.cards[2]?.card?.card?.info;
+  // const { name, cuisines, costForTwoMessage } =
+  //   resInfo?.data?.cards[2]?.card?.card?.info;
 
-  const { itemCards } =
-    resInfo.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[2].card.card;
+  // const { itemCards } =
+  //   resInfo.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[2].card.card;
 
-  const { defaultPrice } = itemCards[0].card.info;
+  // const { defaultPrice } = itemCards[0].card.info;
 
   return (
     <div className="menu">
-      <h1>{name}</h1>
-      <h2>{cuisines.join(", ")}</h2>
-      <h3>{costForTwoMessage}</h3>
+      <h1>{resInfo?.data?.cards[2]?.card?.card?.info.name}</h1>
+      <h2>{resInfo?.data?.cards[2]?.card?.card?.info.cuisines.join(", ")}</h2>
+      <h3>{resInfo?.data?.cards[2]?.card?.card?.info.costForTwoMessage}</h3>
       <ul>
         {/* map() fn uses callback fn
       i.e.syntax of callbcak fn  () => ()
@@ -55,7 +53,7 @@ const RestaurantMenu = () => {
         {/* arrow fn r syntax hocche
               ()=>{}
         */}
-        {itemCards.map((p) => (
+        {resInfo.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.itemCards.map((p) => (
           <li key={p.card.info.id}>
             {p.card.info.name} - {" Rs."}
             {defaultPrice}

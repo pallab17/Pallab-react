@@ -75,7 +75,7 @@ class UserClass extends React.Component {
     this.state ={
         // eg 
         count : 0,
-        // count2 : 2,
+         count2 : 0,
 
     }
   }
@@ -92,6 +92,24 @@ class UserClass extends React.Component {
         {/* destructure korar por */}
         <h1>classCount = {count}</h1>
         {/* <h1>classCount2 = {count2}</h1> */}
+        <button onClick={()=>{
+            // never update state var directly
+            // setState()  fn ta react amaader ke deye to update the state var just like fnal component e useState r fn ta
+// setState r bhetore it contains the logic of updated var in  a object format 
+            this.setState({
+                count : this.state.count + 1,
+            })
+        }}
+        >CountIncrease</button>
+        <button onClick={()=>{
+            // never update state var directly
+            // setState()  fn ta react amaader ke deye to update the state var just like fnal component e useState r fn ta
+// setState r bhetore it contains the logic of updated var in  a object format 
+            this.setState({
+                count : this.state.count - 1,
+            })
+        }}
+        >CountDecrease</button>
         <h2>{name} </h2>
         <h3>{loc} </h3>
         <h4>Contact - github-pallab17</h4>

@@ -31,11 +31,27 @@ props in class based components
                 name="pb7 class based component props sikhchi"   --> props 
             />
 fnal component ke jerom bhabe props send kori amra sei bhabei amra class based component keo prop send kori amra
+sudhu props ta receive korar time e amra constructor fn use kore props ta receive kori tarpor ekta super fn likhe i.e. super() oitar modhe props ta dhukiye di etai niyom basically byas etai holo difference
+// to receive the props ekta constructor fn banachi
+syntax of receiving props in a class based component
+constructor(props){
+    super(props);
+    console.log(props);
+}
+
+
 
 */
 import React from "react";
 
 class UserClass extends React.Component {
+// to receive the props ekta constructor fn banachi
+constructor(props){
+    super(props);
+    console.log(props);
+}
+
+
   // it contains a render method /fn which returns a piece of jsx which will be displayed on the ui
   render() {
     return (

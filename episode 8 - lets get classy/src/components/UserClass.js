@@ -17,8 +17,17 @@ fnal component - js fn which returns a jsx
 class based component - js class which extends react.component and which has the render fn which returns a piece of jsx
 
 
+now React.Component is a class jeita amader ke react diyeche jeita theke UserClass kichu property inherit korche
+so amader ke import korte hobe ei React.Component from React using import React from "react";
+ekta mathaye qs astei pare je babu ami use korchi React.Component tahole ami import React.Component keno korchi na ?
+ans ta hocche React.Component hocche react r chele so React hoccche baba jodi ami baba kei import kori tahole chele keo sathe peye jabo  bujhla ?
+
+
+Class based component r import export same bhabei hoye like fnal components
+
 
 */
+import React from "react";
 
 class UserClass extends React.Component {
   // it contains a render method /fn which returns a piece of jsx which will be displayed on the ui
@@ -32,3 +41,10 @@ class UserClass extends React.Component {
     );
   }
 }
+
+
+// exporting the class based component
+// syntax
+// export default Component_name
+
+export default UserClass;

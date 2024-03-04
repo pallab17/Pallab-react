@@ -8,9 +8,15 @@ const User = (aila) => {
     <div className="user-card">
     <h1>Count = {count}</h1>
     <button onClick={()=>{
+      
       setCount(count+1);
     }}
     >CountIncrease</button>
+    <button onClick={()=>{
+      
+      setCount(count-1);
+    }}
+    >CountDecrease</button>
     {/* <h1>Count2 = {count2}</h1> */}
       <h2>{aila.name}</h2>
       <h3>location - Bally</h3>

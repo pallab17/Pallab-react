@@ -66,3 +66,26 @@ A: `useEffect` expects it's callback function to return nothing or return a func
 
 - [React Life Cycle Method Diagram](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
 - [Akshay Saini Code Link](https://bitbucket.org/namastedev/namaste-react-live/src/master/)
+
+
+
+
+## Namaste React Course by Akshay Saini
+
+# Episode 08 - Let's get Classy
+
+## Coding Assignment:
+
+- Create `Class Based` Component.
+  - Create 2 `class-based child components`.
+  - `Pass props` from `Parent to child`.
+  - Create a `constructor`.
+  - Create a `state variable` inside child.
+  - Use `this.setState` to update it.
+  - What if there are `multiple state variables`?
+  - Write a `console.log` for each lifecycle method.
+  - Play with the `console logs` to find out the correct order of their execution.
+- Create interval inside `componentDidMount`?
+  - Use `clearInterval` to fix the issue caused by the interval
+
+## [Food App About Page](https://food-app-about-page.netlify.app/)

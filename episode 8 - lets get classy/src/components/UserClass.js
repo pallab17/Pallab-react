@@ -110,6 +110,13 @@ class UserClass extends React.Component {
             })
         }}
         >CountDecrease</button>
+        <button onClick={()=>{
+            this.setState({
+                count:0,
+
+            })
+        }}
+        >CountNeutral</button>
         <h2>{name} </h2>
         <h3>{loc} </h3>
         <h4>Contact - github-pallab17</h4>

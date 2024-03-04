@@ -59,7 +59,7 @@ constructor(props){
   render() {
     return (
       <div className="user-card">
-        <h2>Pallab Banerjee</h2>
+        <h2>{this.props.name} </h2>
         <h3>location - Bally</h3>
         <h4>Contact - github-pallab17</h4>
       </div>

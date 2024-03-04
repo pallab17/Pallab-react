@@ -13,6 +13,7 @@ const About = ()=> {
             {/* <h3>class based component starts</h3> */}
             <UserClass
                 name="pb7 class based component props sikhchi"
+                loc="location - Bally-class"
             />
         </>
     )

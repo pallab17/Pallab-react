@@ -26,6 +26,12 @@ ans ta hocche React.Component hocche react r chele so React hoccche baba jodi am
 Class based component r import export same bhabei hoye like fnal components
 
 
+props in class based components
+ <UserClass
+                name="pb7 class based component props sikhchi"   --> props 
+            />
+fnal component ke jerom bhabe props send kori amra sei bhabei amra class based component keo prop send kori amra
+
 */
 import React from "react";
 

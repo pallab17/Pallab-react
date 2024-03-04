@@ -17,6 +17,11 @@ const User = (aila) => {
       setCount(count-1);
     }}
     >CountDecrease</button>
+    <button onClick={()=>{
+      
+      setCount(0);
+    }}
+    >CountNeutral</button>
     {/* <h1>Count2 = {count2}</h1> */}
       <h2>{aila.name}</h2>
       <h3>location - Bally</h3>

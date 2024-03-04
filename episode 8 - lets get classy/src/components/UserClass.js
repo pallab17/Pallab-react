@@ -9,6 +9,15 @@ and to make it class based component such that reacts understands that is a clas
 syntax entends React.Component
 */
 
-class UserClass extends React.Component{
-    
+class UserClass extends React.Component {
+  // it contains a render method /fn which returns a piece of jsx which will be displayed on the ui
+  render() {
+    return (
+      <div className="user-card">
+        <h2>Pallab Banerjee</h2>
+        <h3>location - Bally</h3>
+        <h4>Contact - github-pallab17</h4>
+      </div>
+    );
+  }
 }

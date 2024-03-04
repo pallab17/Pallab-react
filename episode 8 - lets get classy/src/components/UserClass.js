@@ -62,6 +62,15 @@ class UserClass extends React.Component {
   constructor(props) {
     super(props);
     console.log(props);
+
+    // creating state variables
+    // sob kota state variable eitar bhetore ei thakbe
+// ei this.state hocche ekta big whole object containing all the state variables
+    this.state ={
+        // eg 
+        count : 0,
+
+    }
   }
 
   // it contains a render method /fn which returns a piece of jsx which will be displayed on the ui
@@ -73,6 +82,7 @@ class UserClass extends React.Component {
         {/* erom bhabe likhbo na dher lets destructure it */}
         {/* <h3>{this.props.loc} </h3>  */}
         {/* destructure korar por */}
+        <h1></h1>
         <h2>{name} </h2>
         <h3>{loc} </h3>
         <h4>Contact - github-pallab17</h4>

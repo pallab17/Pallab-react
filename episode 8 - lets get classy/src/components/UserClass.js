@@ -54,6 +54,12 @@ constructor r modhe amra sudhu props ei receive korina amra  state variable guno
 age kar time e usestate bole kono hook chilo na this.state use kora hoto for using state variables
 
 
+
+fnal component e state variable guno alada alada kore amra likhi tao react ei state var guno ke ek jayega kore rakhe behind the scenes
+
+class based component toh age thekei sob kota state var ke ek jayega te joro kore rakhe 
+
+
 */
 import React from "react";
 

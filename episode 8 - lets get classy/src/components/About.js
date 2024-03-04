@@ -1,4 +1,5 @@
-import User from "./User";
+import User from "./user";
+import UserClass from "./UserClass";
 
 const About = ()=> {
     return(
@@ -6,6 +7,8 @@ const About = ()=> {
             <h1>About Us page</h1>
             <h2>this is me pb7 watching react webseries by akshay saini</h2>
             <User/>
+            <h3>class based component starts</h3>
+            <UserClass/>
         </>
     )
 }

@@ -69,6 +69,7 @@ class UserClass extends React.Component {
     this.state ={
         // eg 
         count : 0,
+        count2 : 2,
 
     }
   }
@@ -76,7 +77,7 @@ class UserClass extends React.Component {
   // it contains a render method /fn which returns a piece of jsx which will be displayed on the ui
   render() {
     const { name, loc } = this.props;
-    const {count} = this.state;
+    const {count,count2} = this.state;
     return (
       <div className="user-card">
         {/* <h2>{this.props.name} </h2>   
@@ -84,6 +85,7 @@ class UserClass extends React.Component {
         {/* <h3>{this.props.loc} </h3>  */}
         {/* destructure korar por */}
         <h1>classCount = {count}</h1>
+        <h1>classCount2 = {count2}</h1>
         <h2>{name} </h2>
         <h3>{loc} </h3>
         <h4>Contact - github-pallab17</h4>

@@ -48,25 +48,28 @@ why we need this. fn ? this.fn use na korle props jeita asche seta access kore u
 import React from "react";
 
 class UserClass extends React.Component {
-// to receive the props ekta constructor fn banachi
-constructor(props){
+  // to receive the props ekta constructor fn banachi
+  constructor(props) {
     super(props);
     console.log(props);
-}
-
+  }
 
   // it contains a render method /fn which returns a piece of jsx which will be displayed on the ui
   render() {
+    const { name, loc } = this.props;
     return (
       <div className="user-card">
-        <h2>{this.props.name} </h2>
-        <h3>location - Bally</h3>
+        {/* <h2>{this.props.name} </h2>   
+        {/* erom bhabe likhbo na dher lets destructure it */}
+        {/* <h3>{this.props.loc} </h3>  */}
+        {/* destructure korar por */}
+        <h2>{name} </h2>
+        <h3>{loc} </h3>
         <h4>Contact - github-pallab17</h4>
       </div>
     );
   }
 }
-
 
 // exporting the class based component
 // syntax

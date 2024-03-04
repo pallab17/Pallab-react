@@ -82,7 +82,7 @@ class UserClass extends React.Component {
         {/* erom bhabe likhbo na dher lets destructure it */}
         {/* <h3>{this.props.loc} </h3>  */}
         {/* destructure korar por */}
-        <h1></h1>
+        <h1>classCount = {this.state.count}</h1>
         <h2>{name} </h2>
         <h3>{loc} </h3>
         <h4>Contact - github-pallab17</h4>

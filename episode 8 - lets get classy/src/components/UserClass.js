@@ -42,6 +42,16 @@ ekta question why using  super(props) ?
 ans ta hocche je bhai this. property/fn ta use korte chai bole super() fn use korte hobe
 why we need this. fn ? this.fn use na korle props jeita asche seta access kore use korbo ki kore pagla!
 
+** 
+rendering a fnal component on the screen-->
+on ur web page if there is a fnal component the web page loads with that fnal component
+this means we are mounting/calling/invoking that fnal component
+
+**
+loading/rendering a class based component on the screen is basically creating a instance of a class 
+jokhun ei amra ekta class based component create korchi tokhun ei constructor ta call hoye aar 
+constructor r modhe amra sudhu props ei receive korina amra  state variable guno ei constructor r modhei likhi
+age kar time e usestate bole kono hook chilo na this.state use kora hoto for using state variables
 
 
 */

@@ -38,6 +38,9 @@ constructor(props){
     super(props);
     console.log(props);
 }
+ekta question why using  super(props) ?
+ans ta hocche je bhai this. property/fn ta use korte chai bole super() fn use korte hobe
+why we need this. fn ? this.fn use na korle props jeita asche seta access kore use korbo ki kore pagla!
 
 
 

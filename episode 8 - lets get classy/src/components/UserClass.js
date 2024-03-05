@@ -61,12 +61,28 @@ class based component toh age thekei sob kota state var ke ek jayega te joro kor
 
 
 
-lifecycle of an class based parent component and a class based child component
+** lifecycle of an class based parent component and a class based child component
 parent constructor
 parent render
 child constructor
 child render
 child component did mount
+parent component did mount
+
+
+*** lifecycle of an class based parent component and two class based child component
+parent constructor
+parent render
+
+firstchild constructor
+firstchild render
+
+secondchild constructor
+secondchild render
+
+firstchild component did mount
+second child component did mount
+
 parent component did mount
 
 */

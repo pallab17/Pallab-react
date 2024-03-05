@@ -91,7 +91,10 @@ why this order ?
 render phase ta basically virtual dom e kaj hoye so fast process hoye 
 tai react multiple child component ke eksathe batch/ekjayega  kore age ei child gunor render phase excecute koriye deye
 
-co
+commit phase e actual dom update hoye tarpor didmount fn tao chole 
+so jehetu actual dom update hoye tai eita onek expensive task 
+so react child component  gulo ke  eksathe batch/ekjayega kore por por commit kore jate 
+performance ta fast  hoye this is the reason react is fast.
 
 */
 import React from "react";

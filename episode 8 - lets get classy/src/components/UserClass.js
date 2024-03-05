@@ -60,6 +60,15 @@ fnal component e state variable guno alada alada kore amra likhi tao react ei st
 class based component toh age thekei sob kota state var ke ek jayega te joro kore rakhe 
 
 
+
+lifecycle of an class based parent component and a class based child component
+parent constructor
+parent render
+child constructor
+child render
+child component did mount
+parent component did mount
+
 */
 import React from "react";
 

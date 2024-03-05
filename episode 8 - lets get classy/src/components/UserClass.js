@@ -74,16 +74,24 @@ parent component did mount
 parent constructor
 parent render
 
-firstchild constructor
-firstchild render
+firstchild constructor   --this is the render 
+firstchild render   -- phase for firstchild
 
-secondchild constructor
-secondchild render
+secondchild constructor  -- this is the render 
+secondchild render -- phase for secondchild
 
-firstchild component did mount
-second child component did mount
+firstchild component did mount  -- this is the commit phase of first child
+second child component did mount  -- this is the commit phase of second child
 
 parent component did mount
+
+refernce nicchi from  [React-Lifecycle-methods-Diagram](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
+
+why this order ?
+render phase ta basically virtual dom e kaj hoye so fast process hoye 
+tai react multiple child component ke eksathe batch/ekjayega  kore age ei child gunor render phase excecute koriye deye
+
+co
 
 */
 import React from "react";

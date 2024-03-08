@@ -103,7 +103,7 @@ class UserClass extends React.Component {
   // to receive the props ekta constructor fn banachi
   constructor(props) {
     super(props);
-    console.log("parent-constructor");
+    // console.log("parent-constructor");
 
     // creating state variables
     // sob kota state variable eitar bhetore ei thakbe
@@ -114,10 +114,15 @@ class UserClass extends React.Component {
          count2 : 0,
 
     }
+     console.log(this.props.name + 'Child Constructor');
   }
+  componentDidMount() {
+    console.log(this.props.name + 'Child- componentDidMount');
+ }
 
   // it contains a render method /fn which returns a piece of jsx which will be displayed on the ui
   render() {
+    console.log(this.props.name + 'Child-render');
     const { name, loc } = this.props;
     const {count,count2} = this.state;
     return (

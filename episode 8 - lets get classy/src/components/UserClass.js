@@ -103,7 +103,7 @@ class UserClass extends React.Component {
   // to receive the props ekta constructor fn banachi
   constructor(props) {
     super(props);
-    console.log(props);
+    console.log("parent-constructor");
 
     // creating state variables
     // sob kota state variable eitar bhetore ei thakbe

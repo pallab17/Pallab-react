@@ -44,6 +44,10 @@ class About extends React.Component{
                     name="pb7 class based component props sikhchi"
                     loc="location - Bally-class"
                 />
+                <UserClass
+                    name="ouuuu class based component props sikhchi"
+                    loc="location - Ballygange-class"
+                />
             </>
         )
     }

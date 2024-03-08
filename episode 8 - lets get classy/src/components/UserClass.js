@@ -88,7 +88,7 @@ parent component did mount
 refernce nicchi from  [React-Lifecycle-methods-Diagram](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
 
 why this order ?
-render phase ta basically virtual dom e kaj hoye so fast process hoye 
+render phase ta basically virtual dom e kaj hoye(i.e. just diff algo ta chole reconcilation process suru hoye tai jonnoi just difference is previous and updated dom tree r modhe difference take note kore rakha hoye) so fast process hoye 
 tai react multiple child component ke eksathe batch/ekjayega  kore age ei child gunor render phase excecute koriye deye
 
 commit phase e actual dom update hoye tarpor didmount fn tao chole 

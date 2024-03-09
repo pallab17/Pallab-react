@@ -1,9 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const User = (aila) => {
   const[count,setCount]=useState(0);
   const[count2]=useState(0);
   console.log(aila);
+
+  useEffect(()=>{
+    // unmounting fn in useEffect
+    return ()=>{
+
+    }
+  },[]);
   return (
     <div className="user-card">
     <h1>Count = {count}</h1>

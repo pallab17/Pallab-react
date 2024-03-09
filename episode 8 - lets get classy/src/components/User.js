@@ -6,11 +6,19 @@ const User = (aila) => {
   console.log(aila);
 
   useEffect(()=>{
+    // creating the reason for unmount fn
+    const timer = setInterval(() => {
+      console.log("pb7 op");
+    }, 1000);
+
+    console.log("useeffect fn");
     // unmounting fn in useEffect
     return ()=>{
+      console.log("this return fn is used as a unmounting fn ");
 
     }
   },[]);
+  console.log("render");
   return (
     <div className="user-card">
     <h1>Count = {count}</h1>

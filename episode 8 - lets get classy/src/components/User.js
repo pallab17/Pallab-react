@@ -5,21 +5,21 @@ const User = (aila) => {
   const[count2]=useState(0);
   console.log(aila);
 
-  useEffect(()=>{
-    // creating the reason for unmount fn
-    const timer = setInterval(() => {
-      console.log("pb7 op");
-    }, 1000);
+  // useEffect(()=>{
+  //   // creating the reason for unmount fn
+  //   const timer = setInterval(() => {
+  //     console.log("pb7 op");
+  //   }, 1000);
 
-    console.log("useeffect fn");
-    // unmounting fn in useEffect
-    return ()=>{
-      clearInterval(timer);
-      console.log("this return fn is used as a unmounting fn ");
+  //   console.log("useeffect fn");
+  //   // unmounting fn in useEffect
+  //   return ()=>{
+  //     clearInterval(timer);
+  //     console.log("this return fn is used as a unmounting fn ");
 
-    }
-  },[]);
-  console.log("render");
+  //   }
+  // },[]);
+  // console.log("render");
   return (
     <div className="user-card">
     <h1>Count = {count}</h1>

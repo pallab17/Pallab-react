@@ -112,6 +112,11 @@ class UserClass extends React.Component {
         // eg 
         // count : 0,
         //  count2 : 0,
+        // ekta state var banachi oitar modhe je github api ta use kore data anchi oita data ke var r modhe update kore debo
+        userInfo :{
+          name : "dummy",
+          location:"default",
+        }
 
     }
    //  console.log(this.props.name + 'Child Constructor');
@@ -125,6 +130,9 @@ async componentDidMount(){
   const data = await fetch("https://api.github.com/users/pallab17");
   const json = await data.json();
   console.log(json);
+  this.setState({
+    userInfo:json,
+  })
 }
 
 
@@ -167,8 +175,9 @@ async componentDidMount(){
             })
         }}
         >CountNeutral</button> */}
-        <h2>{name} </h2>
-        <h3>{loc} </h3>
+        
+        <h2>{this.state.userInfo.name} </h2>
+        <h3>{this.state.userInfo.location} </h3>
         <h4>Contact - github-pallab17</h4>
       </div>
     );

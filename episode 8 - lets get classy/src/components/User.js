@@ -14,6 +14,7 @@ const User = (aila) => {
     console.log("useeffect fn");
     // unmounting fn in useEffect
     return ()=>{
+      clearInterval(timer);
       console.log("this return fn is used as a unmounting fn ");
 
     }

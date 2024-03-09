@@ -177,6 +177,8 @@ componentDidUpdate(){
 
 // when we navigate to another component or pg this fn is called 
 componentWillUnmount(){
+  //   clearInterval(this.timer); this fn will make sure the set interval fn wont run when we navigate to other pages from the about pg
+  clearInterval(this.timer);
   console.log("component willunmount");
 }
 

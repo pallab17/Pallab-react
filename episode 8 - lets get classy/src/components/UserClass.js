@@ -156,6 +156,12 @@ async componentDidMount(){
  * Life Cycle Diagram Website Reference: https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
  */
 
+
+// first time render hoye componentdidmount() fn ta call hocche
+// tarpor theke joto bar render hoye componentDidUpdate() fn ta call hoye as forst bar r por theke component is updated not mounted
+
+
+
 // basically ei stage ta hocche 2nd  last stage of mounting 
 componentDidUpdate(){
   console.log("component did update");

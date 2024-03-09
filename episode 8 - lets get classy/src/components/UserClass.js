@@ -127,6 +127,7 @@ class UserClass extends React.Component {
   // }
   // amra fn based component e jerom useffect hook use kore api call kortam using async await fn ekhane class based component e amra api call korbo making this componentdidMount fn async
 async componentDidMount(){
+  console.log( 'Child- componentDidMount');
   const data = await fetch("https://api.github.com/users/pallab17");
   const json = await data.json();
   console.log(json);
@@ -160,6 +161,7 @@ componentDidUpdate(){
   console.log("component did update");
 }
 
+// when we navigate to another component or pg this fn is called 
 componentWillUnmount(){
   console.log("component willunmount");
 }

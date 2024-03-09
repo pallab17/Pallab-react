@@ -116,9 +116,18 @@ class UserClass extends React.Component {
     }
    //  console.log(this.props.name + 'Child Constructor');
   }
-  componentDidMount() {
-   // console.log(this.props.name + 'Child- componentDidMount');
- }
+  
+  // componentDidMount() {
+  //   // console.log(this.props.name + 'Child- componentDidMount');
+  // }
+  // amra fn based component e jerom useffect hook use kore api call kortam using async await fn ekhane class based component e amra api call korbo making this componentdidMount fn async
+async componentDidMount(){
+  const data = await fetch("https://api.github.com/users/pallab17");
+  const json = await data.json();
+  console.log(json);
+}
+
+
 
   // it contains a render method /fn which returns a piece of jsx which will be displayed on the ui
   render() {

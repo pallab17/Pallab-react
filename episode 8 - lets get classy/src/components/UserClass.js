@@ -110,8 +110,8 @@ class UserClass extends React.Component {
 // ei this.state hocche ekta big whole object containing all the state variables
     this.state ={
         // eg 
-        count : 0,
-         count2 : 0,
+        // count : 0,
+        //  count2 : 0,
 
     }
    //  console.log(this.props.name + 'Child Constructor');
@@ -132,17 +132,17 @@ async componentDidMount(){
   // it contains a render method /fn which returns a piece of jsx which will be displayed on the ui
   render() {
    // console.log(this.props.name + 'Child-render');
-    const { name, loc } = this.props;
-    const {count,count2} = this.state;
+    // const { name, loc } = this.props;
+    // const {count,count2} = this.state;
     return (
       <div className="user-card">
         {/* <h2>{this.props.name} </h2>   
         {/* erom bhabe likhbo na dher lets destructure it */}
         {/* <h3>{this.props.loc} </h3>  */}
         {/* destructure korar por */}
-        <h1>classCount = {count}</h1>
-        {/* <h1>classCount2 = {count2}</h1> */}
-        <button onClick={()=>{
+        {/* <h1>classCount = {count}</h1>
+        <h1>classCount2 = {count2}</h1> */}
+        {/* <button onClick={()=>{
             // never update state var directly
             // setState()  fn ta react amaader ke deye to update the state var just like fnal component e useState r fn ta
 // setState r bhetore it contains the logic of updated var in  a object format 
@@ -150,8 +150,8 @@ async componentDidMount(){
                 count : this.state.count + 1,
             })
         }}
-        >CountIncrease</button>
-        <button onClick={()=>{
+        >CountIncrease</button> */}
+        {/* <button onClick={()=>{
             // never update state var directly
             // setState()  fn ta react amaader ke deye to update the state var just like fnal component e useState r fn ta
 // setState r bhetore it contains the logic of updated var in  a object format 
@@ -159,14 +159,14 @@ async componentDidMount(){
                 count : this.state.count - 1,
             })
         }}
-        >CountDecrease</button>
-        <button onClick={()=>{
+        >CountDecrease</button> */}
+        {/* <button onClick={()=>{
             this.setState({
                 count:0,
 
             })
         }}
-        >CountNeutral</button>
+        >CountNeutral</button> */}
         <h2>{name} </h2>
         <h3>{loc} </h3>
         <h4>Contact - github-pallab17</h4>

@@ -142,6 +142,8 @@ async componentDidMount(){
    // console.log(this.props.name + 'Child-render');
     // const { name, loc } = this.props;
     // const {count,count2} = this.state;
+    const {name,location,login,avatar_url
+    } = this.state.userInfo;
     return (
       <div className="user-card">
         {/* <h2>{this.props.name} </h2>   
@@ -175,10 +177,10 @@ async componentDidMount(){
             })
         }}
         >CountNeutral</button> */}
-        
-        <h2>{this.state.userInfo.name} </h2>
-        <h3>{this.state.userInfo.location} </h3>
-        <h4>Contact - github-pallab17</h4>
+        <img src={avatar_url}/>
+        <h2>Name -{name} </h2>
+        <h3>loc-{location} </h3>
+        <h4>Contact - github-{login}</h4>
       </div>
     );
   }

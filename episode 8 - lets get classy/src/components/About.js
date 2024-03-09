@@ -22,15 +22,15 @@ import React from "react";
 class About extends React.Component{
     constructor(props){
         super(props);
-        console.log("parent-constructor");
+       // console.log("parent-constructor");
 
     }
     componentDidMount() {
-         console.log('Parent Component Did Mount');
+       //  console.log('Parent Component Did Mount');
       }
 
     render(){
-        console.log("parent-render");
+      //  console.log("parent-render");
         return(
             <>
                 <h1>About Us page</h1>
@@ -44,14 +44,14 @@ class About extends React.Component{
                     name="pb7 class based component props sikhchi"
                     loc="location - Bally-class"
                 />
-                <UserClass
+                {/* <UserClass
                     name="ouuuu class based component props sikhchi"
                     loc="location - Ballygange-class"
                 />
                  <UserClass
                     name="third class based component props sikhchi"
                     loc="location - Ballygange-class"
-                />
+                /> */}
             </>
         )
     }

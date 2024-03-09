@@ -134,6 +134,36 @@ async componentDidMount(){
     userInfo:json,
   })
 }
+/* ****************************************************************
+ *
+ *
+ * ----- Mounting CYCLE -----
+ *   Constructor (dummy)
+ *   Render (dummy)
+ *       <HTML Dummy></HTML>
+ *   Component Did Mount
+ *       <API Call>
+ *       <this.setState> - State variable is updated
+ *
+ * ----- UPDATE CYCLE -----
+ *       render(API data)
+ *       <HTML (new API data)>
+ *   Component Did Update
+ *   Component Will Unmount
+ *
+ *
+ * Life Cycle Diagram Website Reference: https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+ */
+
+// basically ei stage ta hocche 2nd  last stage of mounting 
+componentDidUpdate(){
+  console.log("component did update");
+}
+
+componentWillUnmount(){
+  console.log("component willunmount");
+}
+
 
 
 

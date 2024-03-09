@@ -159,7 +159,7 @@ async componentDidMount(){
 
 // first time render hoye componentdidmount() fn ta call hocche
 // tarpor theke joto bar render hoye componentDidUpdate() fn ta call hoye as forst bar r por theke component is updated not mounted
-
+// componentDidUpdate() fn is the only method which is called everytime the component is updated
 
 
 // basically ei stage ta hocche 2nd  last stage of mounting 

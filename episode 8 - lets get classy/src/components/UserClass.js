@@ -126,14 +126,22 @@ class UserClass extends React.Component {
   //   // console.log(this.props.name + 'Child- componentDidMount');
   // }
   // amra fn based component e jerom useffect hook use kore api call kortam using async await fn ekhane class based component e amra api call korbo making this componentdidMount fn async
-async componentDidMount(){
-  console.log( 'Child- componentDidMount');
-  const data = await fetch("https://api.github.com/users/pallab17");
-  const json = await data.json();
-  console.log(json);
-  this.setState({
-    userInfo:json,
-  })
+// async componentDidMount(){
+//   console.log( 'Child- componentDidMount');
+//   const data = await fetch("https://api.github.com/users/pallab17");
+//   const json = await data.json();
+//   console.log(json);
+//   this.setState({
+//     userInfo:json,
+//   })
+// }
+
+componentDidMount(){
+  // ei set interval fn ta about pg e click korle 1s ontor ontor cholbe tarpor onno pg e navigate korle ei set interval fn ta abar notun kore zero theke start hobe
+  // to stop this we use componentwillmount() fn jate about pg e sudhu chole ei set interval fn ta i.e. whenever we are navigating to another pg ei set interval fn ta cholbe na bondho hoye jabe
+  this.timer = setInterval(()=>{
+console.log("pb7 op");
+  },1000)
 }
 /* ****************************************************************
  *

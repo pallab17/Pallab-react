@@ -97,5 +97,15 @@ const Grocery = lazy(()=> import("./components/Grocery"));
 
 ![proof](image.png)
 
+ebar kotha ta hocche ![lazy loading error](image-1.png) we are getting this error 
+why  this error ?
+prothome jokhun amra home pg take khulchi ei grocery r code index.js e file e nei
+tarpor jokhun amra grocery r pg tate jacchi tokhun jehetu grocery r code ta  react khuje pacche na tai react ei error ta dicche
+basically prothome home pg e jokhun amra achi
+tarpor amra grocery pg e jacchi 
+aar grocery pg load hote suppose 15ms dekhache amar browser e 
+so react jehetu ei 15ms time r modhe grocery r code ta khuje pacche na tai error dicche
+
+
 
 */

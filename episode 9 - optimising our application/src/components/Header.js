@@ -1,10 +1,13 @@
 import { LOGO_URL } from "../common/constants";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../common/useOnlineStatus";
 // import {Component} from path --> syntax for named-export
 
 const Header = () => {
   const [loginbutton, setloginbutton] = useState("Login");
+
+  const status = useOnlineStatus();
 
   // console.log("header component called");
   /*
@@ -47,6 +50,9 @@ const Header = () => {
       </div>
       <div className="links">
         <ul>
+        <li>
+          Online Status : {status ? "✅": "🔴"}
+        </li>
           <li>
             <Link to="/">Home</Link>
           </li>

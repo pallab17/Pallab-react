@@ -43,5 +43,6 @@ Akshay saini is teaching us the purpose of single responsibility principle that 
 So our code becomes reusable maintainable as well as testable When we use the single responsibility function purpose
 So now Sir will teach us the component that is not following. single. responsibility function. which we can optimize. by writing our own custom hooks.
 
-
+custom hook without use o lekha jaye
+but it is a ggod practice to write use before any custom hook.
 */

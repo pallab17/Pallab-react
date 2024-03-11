@@ -93,6 +93,7 @@ lazy(()=>{})
 
 and this callback fn takes a fn import() and this import fn asks for the location where the component is stored/placed.
 now lets apply  this all together.
+const Grocery = lazy(()=> import("./components/Grocery"));
 
 
 */

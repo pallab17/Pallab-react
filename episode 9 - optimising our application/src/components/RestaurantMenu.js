@@ -24,34 +24,23 @@ const RestaurantMenu = () => {
   console.log(resID);
   const [resInfo, setresInfo] = useState(null);
 
-  // console.log(resId);
-  // useParams() fn ta basically amader restaurant id ta store korte help kore jei id ta url r pashe screen e render hocche
-
+ 
   useEffect(() => {
     fetchMenu();
   }, []);
 
-  // 651011
-  // 692058
 
   const fetchMenu = async () => {
     const data = await fetch(
       MENU_API + resID
-      // + "&catalog_qa=undefined&submitAction=ENTER"
-
-      // MENU_API + resId + "&catalog_qa=undefined&submitAction=ENTER"
     );
-
     const json = await data.json();
-
     console.log(json);
     setresInfo(json);
   };
-
   if (resInfo === null) {
     return <Shimmer />;
   }
-
   const { name, cuisines, costForTwoMessage } =
     resInfo?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards[2]?.card
       ?.card?.itemCards[0]?.card?.info;

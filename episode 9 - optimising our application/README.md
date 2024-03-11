@@ -74,7 +74,25 @@ ebar hocche ta hooche je index.js file in network tab e  under e ei grocery r co
 eita amra chaina 
 
 so we will apply lazy loading or on-demand loading === jokhun appn ta load hobe initially home screen e ei tokhun ei  grocery r code ta load hobena
-grocery r code ta tokhun ei load hobe jokhun amra grocery r page e jabo. eijonnoi on-demand loading o bola hoye ei method take.  
+grocery r code ta tokhun ei load hobe jokhun amra grocery r page e jabo. eijonnoi on-demand loading o bola hoye ei method take.
+
+but we wont import grocery like this
+import Grocery from "./components/Grocery";
+
+we will use lazy fn
+
+const Grocery = lazy()
+
+this lazy() fn is a fn coming from react as a named import so
+
+import {lazy} from "react";
+
+now this lazy() fn takes one paramter/argument which is a callback fn
+i.e.
+lazy(()=>{})
+
+and this callback fn takes a fn import() and this import fn asks for the location where the component is stored/placed.
+now lets apply  this all together.
 
 
 */

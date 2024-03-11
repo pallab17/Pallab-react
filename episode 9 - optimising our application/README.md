@@ -66,6 +66,15 @@ breaking down appn into smaller chunks
 
 
 
+now creating a grocery component
+suppose amader appn grocery o sell kore such that grocery page consists of many child components
+
+ebar hocche ta hooche je index.js file in network tab e  under e ei grocery r code ta ache
+
+eita amra chaina 
+
+so we will apply lazy loading or on-demand loading === jokhun appn ta load hobe initially home screen e ei tokhun ei  grocery r code ta load hobena
+grocery r code ta tokhun ei load hobe jokhun amra grocery r page e jabo. eijonnoi on-demand loading o bola hoye ei method take.  
 
 
 */

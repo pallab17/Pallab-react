@@ -123,6 +123,12 @@ code-
 
         fallback={<h1>Loading......</h1>} ei fallback fn ta value hisabe sudhu jsx e neye so hw is try it with a different shimmer ui type
         ![done with shimmer ui](image-3.png)
+        code-
+        (
+          <Suspense fallback={Shimmer()}>
+            <Grocery />
+          </Suspense>
+        )
         
 
 

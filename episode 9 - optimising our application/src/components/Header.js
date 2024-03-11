@@ -52,6 +52,7 @@ const Header = () => {
         <ul>
         <li>
           Online Status : {status ? "✅": "🔴"}
+          {/* So basically, we're using our own custom hook to check the online status. And now we are using that custom hook over here to show a green teak when the user is having a Internet connectivity. And when the Internet is off the browser or the homepage will be shown a red dot with the   H1 tag that states that Oma. Internet nei. */}
         </li>
           <li>
             <Link to="/">Home</Link>

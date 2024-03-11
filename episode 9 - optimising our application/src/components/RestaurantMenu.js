@@ -1,5 +1,5 @@
 import React from "react";
-
+import useRestaurant from "../common/useRestaurant";
 import { useParams } from "react-router-dom";
 
 import Shimmer from "./Shimmer";
@@ -22,22 +22,7 @@ So basically this restaurant menu component is not following the
 const RestaurantMenu = () => {
   const { resID } = useParams();
   console.log(resID);
-  
-
- 
-  useEffect(() => {
-    fetchMenu();
-  }, []);
-
-
-  const fetchMenu = async () => {
-    const data = await fetch(
-      MENU_API + resID
-    );
-    const json = await data.json();
-    console.log(json);
-    setresInfo(json);
-  };
+  const resInfo = useRestaurant(resID);
   if (resInfo === null) {
     return <Shimmer />;
   }

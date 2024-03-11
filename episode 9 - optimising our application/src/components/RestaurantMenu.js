@@ -41,12 +41,14 @@ const RestaurantMenu = () => {
     return <Shimmer />;
   }
 
-  const { name, cuisines, costForTwoMessage } =
-    resInfo?.data?.cards[2]?.card?.card?.info;
+  const { name, cuisines, costForTwoMessage } =resInfo?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards[2]?.card?.card?.itemCards[0]?.card?.info;
+    // resInfo?.data?.cards[2]?.card?.card?.info;
 
-  const { itemCards } =
-    resInfo?.data.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
-      ?.card;
+    // data.cards[2].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.itemCards[0].card.info
+  const { itemCards } = resInfo?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[3]?.card?.card;
+    // resInfo?.data.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
+    //   ?.card;
+      // data.cards[2].groupedCard.cardGroupMap.REGULAR.cards[3].card.card.itemCards
 
   console.log(itemCards);
   // data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.itemCards
@@ -56,7 +58,7 @@ const RestaurantMenu = () => {
   return (
     <div className="menu">
       <h1>{name}</h1>
-      <h2>{cuisines.join(", ")}</h2>
+      <h2>{cuisines}</h2>
       <h3>{costForTwoMessage}</h3>
       <ul>
         {/* map() fn uses callback fn

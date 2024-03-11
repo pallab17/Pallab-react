@@ -9,6 +9,8 @@ export const CDN_URL =  "https://res.cloudinary.com/swiggy/image/upload/fl_lossy
 
 export const MENU_API =     "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=";
 
+//&catalog_qa=undefined&submitAction=ENTER#
+
 //  utils folder r naam ami common folder use korchi for my good
 // util/common folder r content gulo use korbe everyone in the code oijonnoi common mal guno ei folder r bhetore thakbe
 

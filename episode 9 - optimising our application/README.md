@@ -45,4 +45,8 @@ So now Sir will teach us the component that is not following. single. responsibi
 
 custom hook without use o lekha jaye
 but it is a ggod practice to write use before any custom hook.
+
+whenever we develop a large scale appn consisting of 1000+ components performance is low
+to improve this what we need is ?
+
 */

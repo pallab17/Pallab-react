@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../common/useOnlineStatus";
 //import resList from "../common/mockdata";
 
 const Body = () => {
@@ -67,6 +68,10 @@ const Body = () => {
   // if(listOfRestaurants.length===0){
   //   return <Shimmer/> ;
   // }
+
+const onlineStatus = useOnlineStatus();
+
+if(onlineStatus===false) return <h1>oops internei nei toh ema</h1>
 
   // using ternary operator
   return listOfRestaurants.length === 0 ? (

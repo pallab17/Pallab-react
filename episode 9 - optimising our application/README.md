@@ -113,7 +113,7 @@ suspense fn r kaj ki ?
 ei je 15ms react grocery code khuje na peye error dicchilo
 ebar react jotokhun ei grocery r code ta pabe 
 totokhun grocery r modhe je fallback code ta thakbe seita screen e show korbe instead of error
-
+![proof](image-2.png)
 
 
 */

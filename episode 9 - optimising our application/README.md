@@ -46,27 +46,25 @@ So now Sir will teach us the component that is not following. single. responsibi
 custom hook without use o lekha jaye
 but it is a ggod practice to write use before any custom hook.
 
+important for system design frontend interview
 whenever we develop a large scale appn consisting of 1000+ components performance is low
 to improve this what we need is ?
-
-
 kotha ta hocche je jehetu parcel react r sob kota ke ek jayega te joro kore 
 just ekta file index.js r modhe sob kota code rekhe oi file take screen e render kore tai jonno
 ebar ki hocche joto component barbe toto ei index.js file r size barbe
 ebar development build e size 2mb thakle production build e size aro kombe.
-
 ekta  1000 ta component wala appn e onek kota bundler thake 
 bundler hocche basically onek kota code ke ekjayega kore 
-
 toh amra jodi just ekta bundler na rekhe 
 onek kota bundler e benge di 
 logical fn unujai
-
 tahole aar ekta single index.js file thakche na onek kota file thakbe
 tahole load porbe na ekta file r opor tai jonno api call slow hobe na 
 such that performance better hobe
-
 this process is known as chunking or code -spliting or dynamic bundling.
+breaking down appn into smaller chunks
+
+
 
 
 

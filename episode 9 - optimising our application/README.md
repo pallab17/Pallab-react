@@ -61,7 +61,7 @@ logical fn unujai
 tahole aar ekta single index.js file thakche na onek kota file thakbe
 tahole load porbe na ekta file r opor tai jonno api call slow hobe na 
 such that performance better hobe
-this process is known as chunking or code -spliting or dynamic bundling.
+this process is known as chunking or code -spliting or dynamic bundling or dynmanic importing.
 breaking down appn into smaller chunks
 
 

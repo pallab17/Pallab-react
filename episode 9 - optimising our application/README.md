@@ -113,7 +113,16 @@ suspense fn r kaj ki ?
 ei je 15ms react grocery code khuje na peye error dicchilo
 ebar react jotokhun ei grocery r code ta pabe 
 totokhun grocery r modhe je fallback code ta thakbe seita screen e show korbe instead of error
-![proof](image-2.png)
+code-
+![proof of using suspense](image-2.png)
+(
+          <Suspense fallback={<h1>Loading......</h1>}>
+            <Grocery />
+          </Suspense>
+        )
+
+        fallback={<h1>Loading......</h1>} ei fallback fn ta value hisabe sudhu jsx e neye so hw is try it with a different shimmer ui type
+        
 
 
 */

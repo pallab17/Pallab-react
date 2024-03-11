@@ -105,6 +105,14 @@ basically prothome home pg e jokhun amra achi
 tarpor amra grocery pg e jacchi 
 aar grocery pg load hote suppose 15ms dekhache amar browser e 
 so react jehetu ei 15ms time r modhe grocery r code ta khuje pacche na tai error dicche
+now how to solve this error ?
+just use suspense fn jeita react amader ke provide kore
+suspense fn r modhe wrap up/dhukiye dao ei grocery component take
+
+suspense fn r kaj ki ?
+ei je 15ms react grocery code khuje na peye error dicchilo
+ebar react jotokhun ei grocery r code ta pabe 
+totokhun grocery r modhe je fallback code ta thakbe seita screen e show korbe instead of error
 
 
 

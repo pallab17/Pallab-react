@@ -12,6 +12,7 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 const Grocery = lazy(() => import("./components/Grocery"));
 
+
 const currYear = new Date().getFullYear();
 
 const Footer = () => {

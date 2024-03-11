@@ -49,4 +49,10 @@ but it is a ggod practice to write use before any custom hook.
 whenever we develop a large scale appn consisting of 1000+ components performance is low
 to improve this what we need is ?
 
+
+kotha ta hocche je jehetu parcel react r sob kota ke ek jayega te joro kore 
+just ekta file index.js r modhe sob kota code rekhe oi file take screen e render kore tai jonno
+ebar ki hocche joto component barbe toto ei index.js file r size barbe
+ebar development build e size 2mb thakle production build e size aro kombe.
+
 */

@@ -95,5 +95,7 @@ and this callback fn takes a fn import() and this import fn asks for the locatio
 now lets apply  this all together.
 const Grocery = lazy(()=> import("./components/Grocery"));
 
+![proof](image.png)
+
 
 */

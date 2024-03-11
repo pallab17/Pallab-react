@@ -1,4 +1,4 @@
-import React, { lazy } from "react";
+import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -9,9 +9,7 @@ import Error from "./components/Error";
 //import Grocery from "./components/Grocery";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
-
 const Grocery = lazy(() => import("./components/Grocery"));
-
 
 const currYear = new Date().getFullYear();
 
@@ -90,14 +88,16 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/grocery",
-        element: <Grocery/>
+        element: (
+          <Suspense fallback={<h1>Loading......</h1>}>
+            <Grocery />
+          </Suspense>
+        ),
       },
       {
         path: "/restaurants/:resID",
-        element: <RestaurantMenu/>,
-        
+        element: <RestaurantMenu />,
       },
-
     ],
     errorElement: <Error />,
     // errorElement: <Error/>,  user kono ulto palta url khulte chaile ei error component ta screen e render hobe

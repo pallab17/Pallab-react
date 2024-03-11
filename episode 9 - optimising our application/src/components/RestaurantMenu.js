@@ -1,7 +1,7 @@
 import React from "react";
-import { useState, useEffect } from "react";
+
 import { useParams } from "react-router-dom";
-import { MENU_API } from "../common/constants";
+
 import Shimmer from "./Shimmer";
 /*
 So basically this restaurant menu component is not following the
@@ -22,7 +22,7 @@ So basically this restaurant menu component is not following the
 const RestaurantMenu = () => {
   const { resID } = useParams();
   console.log(resID);
-  const [resInfo, setresInfo] = useState(null);
+  
 
  
   useEffect(() => {

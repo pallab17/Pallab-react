@@ -40,7 +40,7 @@ const Header = () => {
   // }, [loginbutton]);
 
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-between  bg-yellow-100 ">
       <div className="app-logo">
         <Link to="/">
 
@@ -48,16 +48,16 @@ const Header = () => {
         </Link>
         {/* <h1 className="logo">LOGO</h1> */}
       </div>
-      <div className="links">
-        <ul className="flex">
-        <li>
+      <div className="flex items-center ">
+        <ul className="flex m-4 p-4 ">
+        <li className="px-4">
           Online Status : {status ? "✅": "🔴"}
           {/* So basically, we're using our own custom hook to check the online status. And now we are using that custom hook over here to show a green teak when the user is having a Internet connectivity. And when the Internet is off the browser or the homepage will be shown a red dot with the   H1 tag that states that Oma. Internet nei. */}
         </li>
-          <li>
+          <li className="px-4">
             <Link to="/">Home</Link>
           </li>
-          <li>
+          <li className="px-4">
             <Link to="/about">About</Link>
             {/* <a href="/about">About</a> */}
             {/* <a href="/about">About</a>    one way to create a route/rasta to about page
@@ -80,13 +80,13 @@ In `Client-side routing or rendering (CSR)`, during the first load, the webapp i
              
              */}
           </li>
-          <li>
+          <li className="px-4">
             <Link to="/contact">Contact</Link>
           </li>
-          <li>
+          <li className="px-4">
             <Link to="/grocery">Grocery</Link>
           </li>
-          <li>Cart</li>
+          <li className="px-4">Cart</li>
           <button
             className="but"
             onClick={() => {

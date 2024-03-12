@@ -149,7 +149,7 @@ if(onlineStatus===false) return <h1>oops internei nei toh ema</h1>
           </button>
         </div>
         </div>
-        <div className="restaurant-container">
+        <div className=" flex flex-wrap">
           {filteredlistOfRestaurants.map((element) => (
            <Link key={element.info.id}
            to={"/restaurants/" + element.info.id}

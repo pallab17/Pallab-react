@@ -40,16 +40,16 @@ const Header = () => {
   // }, [loginbutton]);
 
   return (
-    <div className="header">
+    <div className="flex justify-between">
       <div className="app-logo">
         <Link to="/">
 
-        <img className="logo" src={LOGO_URL} alt="" />
+        <img className="w-20" src={LOGO_URL} alt="" />
         </Link>
         {/* <h1 className="logo">LOGO</h1> */}
       </div>
       <div className="links">
-        <ul>
+        <ul className="flex">
         <li>
           Online Status : {status ? "✅": "🔴"}
           {/* So basically, we're using our own custom hook to check the online status. And now we are using that custom hook over here to show a green teak when the user is having a Internet connectivity. And when the Internet is off the browser or the homepage will be shown a red dot with the   H1 tag that states that Oma. Internet nei. */}

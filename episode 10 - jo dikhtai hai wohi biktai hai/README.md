@@ -9,3 +9,10 @@ episode 10-
  6. bootstrap
 7. ant design
 8. tailwind css - jeita amra sikhbo ajke
+
+syntax importing tailwing with parcel
+npm install -D tailwindcss postcss
+npx tailwindcss init
+
+
+

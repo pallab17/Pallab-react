@@ -80,17 +80,17 @@ if(onlineStatus===false) return <h1>oops internei nei toh ema</h1>
     <>
       <div className="body">
         {/* <div className="search">search</div> */}
-        <div className="filter">
-          <div className="search">
+        <div className="filter flex">
+          <div className="search p-4 m-4">
             <input
               type="text"
-              className="search-box"
+              className=" border border-solid border-black  "
               value={searchText}
               onChange={(e) => {
                 setsearchText(e.target.value); // onchange fn take use kore user je text ta likhche seitake ami state variable (e update kore) e store kore rakhchi
               }}
             />
-            <button
+            <button className=" m-4 py-1 px-4 bg-green-100 rounded-lg "
               onClick={() => {
                 // ei search btn ta click hole i want to show the user what the user want to see according to their searched text
                 // search  text unujai filter marbo
@@ -116,9 +116,9 @@ if(onlineStatus===false) return <h1>oops internei nei toh ema</h1>
             >
               Search
             </button>
-          </div>
-          <button
-            className="filter-btn"
+          
+          <button className=" m-4 py-1 px-4 bg-green-100 "
+            
             onClick={() => {
               // ekhane logic ta amake bhabte + likhte hobe
               // logic will contain--> je bhai button ta click korle only top rated restaurant screen e dekhabe
@@ -137,7 +137,7 @@ if(onlineStatus===false) return <h1>oops internei nei toh ema</h1>
             Top Rated Restaurants
           </button>
           <button
-            className="filter-btn"
+            className=" m-4 py-1 px-4 bg-green-100 "
             onClick={() => {
               const filteredList = listOfRestaurants.filter(
                 (r) => r.info.sla.deliveryTime < 20
@@ -147,6 +147,7 @@ if(onlineStatus===false) return <h1>oops internei nei toh ema</h1>
           >
             Fast deliveryTime
           </button>
+        </div>
         </div>
         <div className="restaurant-container">
           {filteredlistOfRestaurants.map((element) => (

@@ -13,7 +13,7 @@ const Body = () => {
   const [filteredlistOfRestaurants, setfilteredlistOfRestaurants] = useState(
     []
   );
-
+console.log(listOfRestaurants);
   const [searchText, setsearchText] = useState("");
 
   /* useEffect sikhchi 

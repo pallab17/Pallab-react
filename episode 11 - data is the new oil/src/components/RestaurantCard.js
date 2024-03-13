@@ -98,4 +98,24 @@ const RestaurantCard = (props) => {
   );
 };
 
+// hoc
+// input - Restaurant card
+// output - label + Restaurant card
+
+export const RestaurantcardwithLabel = (RestaurantCard) =>{
+  return () => {
+    // return () => {   returning a component component diner sesh e ekta fn so writing like this
+
+    // now component also returns a jsx
+    return(
+      <div>
+        <label >Discount</label>
+        <RestaurantCard/>
+      </div>
+    )
+
+  }
+}
+
+
 export default RestaurantCard;

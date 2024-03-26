@@ -1,4 +1,6 @@
-import React from "react";
+ 
+ import React from "react";
+
 import useRestaurant from "../common/useRestaurant";
 import { useParams } from "react-router-dom";
 
@@ -33,14 +35,14 @@ const RestaurantMenu = () => {
   // resInfo?.data?.cards[2]?.card?.card?.info;
 
   // data.cards[2].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.itemCards[0].card.info
-  const { itemCards } =
-    resInfo?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[3]?.card
-      ?.card;
+  // const { itemCards } =
+  //   resInfo?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[3]?.card
+  //     ?.card;
   // resInfo?.data.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
   //   ?.card;
   // data.cards[2].groupedCard.cardGroupMap.REGULAR.cards[3].card.card.itemCards
 
-  console.log(itemCards);
+  //console.log(itemCards);
   // data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.itemCards
 
   // const { defaultPrice, price } = itemCards?.card?.info;
@@ -58,12 +60,12 @@ const RestaurantMenu = () => {
         {/* arrow fn r syntax hocche
               ()=>{}
         */}
-        {itemCards?.map((p) => (
+        {/* {itemCards?.map((p) => (
           <li key={p.card.info.id}>
             {p.card.info.name} - {" Rs."}
             {p.card.info.defaultPrice || p.card.info.price}
           </li>
-        ))}
+        ))} */}
         {/* <li>{itemCards[0].card.info.name}</li>
         <li>{itemCards[1].card.info.name}</li>
         <li>{itemCards[2].card.info.name}</li> */}

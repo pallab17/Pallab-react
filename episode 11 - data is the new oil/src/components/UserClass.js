@@ -136,12 +136,18 @@ class UserClass extends React.Component {
 //   })
 // }
 
-componentDidMount(){
+ async componentDidMount(){
   // ei set interval fn ta about pg e click korle 1s ontor ontor cholbe tarpor onno pg e navigate korle ei set interval fn ta abar notun kore zero theke start hobe
   // to stop this we use componentwillmount() fn jate about pg e sudhu chole ei set interval fn ta i.e. whenever we are navigating to another pg ei set interval fn ta cholbe na bondho hoye jabe
-  this.timer = setInterval(()=>{
-console.log("pb7 op");
-  },1000)
+//   this.timer = setInterval(()=>{
+// console.log("pb7 op");
+//   },1000)
+const data = await fetch("https://api.github.com/users/pallab17");
+  const json = await data.json();
+  console.log(json);
+  this.setState({
+    userInfo:json,
+  })
 }
 /* ****************************************************************
  *

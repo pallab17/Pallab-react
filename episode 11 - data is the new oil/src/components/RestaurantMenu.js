@@ -27,7 +27,7 @@ const RestaurantMenu = () => {
   if (resInfo === null) {
     return <Shimmer />;
   }
-  const { name, cuisines, costForTwoMessage } = resInfo?.data?.cards[0]?.card?.card?.info;
+  const { name, cuisines, costForTwoMessage } = resInfo?.data?.cards[2]?.card?.card?.info;
     // resInfo?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards[2]?.card
     //   ?.card?.itemCards[0]?.card?.info;
   // resInfo?.data?.cards[2]?.card?.card?.info;

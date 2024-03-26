@@ -54,28 +54,13 @@ const RestaurantMenu = () => {
   console.log(categories);
 
   return (
-    <div className=" bg-red ">
-      <h1 className="text-bold">{name}</h1>
-      <h2>{cuisines}- {costForTwoMessage}</h2>
-      {/* <h3>{costForTwoMessage}</h3> */}
-      <ul>
-        {/* map() fn uses callback fn
-      i.e.syntax of callbcak fn  () => ()
-       */}
-
-        {/* arrow fn r syntax hocche
-              ()=>{}
-        */}
-        {/* {itemCards?.map((p) => (
-          <li key={p.card.info.id}>
-            {p.card.info.name} - {" Rs."}
-            {p.card.info.defaultPrice || p.card.info.price}
-          </li>
-        ))} */}
-        {/* <li>{itemCards[0].card.info.name}</li>
-        <li>{itemCards[1].card.info.name}</li>
-        <li>{itemCards[2].card.info.name}</li> */}
-      </ul>
+    <div className=" text-center  ">
+      <h1 className=" font-bold  my-6 text-2xl ">{name}</h1>
+      <h2 className="font-bold text-lg">{cuisines}- {costForTwoMessage}</h2>
+   {/* accordian categories guno */}
+   
+   {categories.map(()=>{})}
+      
     </div>
   );
 };

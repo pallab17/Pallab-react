@@ -7,8 +7,10 @@ const RestaurantCategory = ({data}) => {
     <div className='w-6/12 mx-auto my-4 bg-gray-50 shadow-lg  p-4 flex justify-between'>
     {/* accordian contains of
      header and body */}
-     <span className='font-bold text-lg'>{data.title}</span>
+     {/* accordian header */}
+     <span className='font-bold text-lg'>{data.title} ({data.itemCards.length})</span>
      <span>🔽</span>
+      {/* accordian datalist */}
       
     </div>
   )

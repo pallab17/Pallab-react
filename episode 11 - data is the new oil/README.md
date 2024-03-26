@@ -7,3 +7,9 @@ In this project I'm going to use the promoted tag that has been provided to the 
 
 
 ![hoc](image-5.png)
+
+![hoc](image-6.png)
+
+![hoc](image-7.png)
+
+![individual restaurant pg](image-8.png)

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard ,{RestaurantcardwithLabel} from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../common/useOnlineStatus";
@@ -15,6 +15,10 @@ const Body = () => {
   );
 console.log(listOfRestaurants);
   const [searchText, setsearchText] = useState("");
+
+  // creating a hoc 
+  //  HigherOrderRestaurantComponentWithLabel is the hoc which has the restaurant component plus the label
+  const HigherOrderRestaurantComponentWithLabel = RestaurantcardwithLabel(RestaurantCard);
 
   /* useEffect sikhchi 
   useeffecr hook - useeffect();

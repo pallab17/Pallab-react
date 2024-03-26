@@ -5,6 +5,7 @@ import useRestaurant from "../common/useRestaurant";
 import { useParams } from "react-router-dom";
 
 import Shimmer from "./Shimmer";
+import RestaurantCategory from "./RestaurantCategory";
 /*
 So basically this restaurant menu component is not following the
  single responsibility function such that we will make this component follow 
@@ -59,7 +60,9 @@ const RestaurantMenu = () => {
       <h2 className="font-bold text-lg">{cuisines}- {costForTwoMessage}</h2>
    {/* accordian categories guno */}
    
-   {categories.map(()=>{})}
+   {categories.map((category)=>(
+    <RestaurantCategory data={categories}/>
+   ))}
       
     </div>
   );

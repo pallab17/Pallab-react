@@ -47,11 +47,17 @@ const RestaurantMenu = () => {
 
   // const { defaultPrice, price } = itemCards?.card?.info;
 
+
+  const categories = resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+    (c)=> c.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+  )
+  console.log(categories);
+
   return (
-    <div className="menu">
-      <h1>{name}</h1>
-      <h2>{cuisines}</h2>
-      <h3>{costForTwoMessage}</h3>
+    <div className=" bg-red ">
+      <h1 className="text-bold">{name}</h1>
+      <h2>{cuisines}- {costForTwoMessage}</h2>
+      {/* <h3>{costForTwoMessage}</h3> */}
       <ul>
         {/* map() fn uses callback fn
       i.e.syntax of callbcak fn  () => ()

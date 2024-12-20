@@ -13,3 +13,11 @@ In this project I'm going to use the promoted tag that has been provided to the 
 ![hoc](image-7.png)
 
 ![individual restaurant pg](image-8.png)
+
+
+
+
+react -> 2 layers
+data layer and ui layer
+data layer is powering the ui layer
+ui layer ta sudhui jsx that is malta 

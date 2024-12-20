@@ -21,3 +21,9 @@ react -> 2 layers
 data layer and ui layer
 data layer is powering the ui layer
 ui layer ta sudhui jsx that is malta 
+
+
+individual restaurant pg r accordian r design take complete korlam
+
+individual restaurant pg r accordian r logic take complete korlam
+creating our own accordian using the toggle feature 

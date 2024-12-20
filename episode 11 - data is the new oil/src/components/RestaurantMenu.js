@@ -61,7 +61,9 @@ const RestaurantMenu = () => {
    {/* accordian categories guno */}
    
    {categories.map((category)=>(
-    <RestaurantCategory  data={category?.card?.card}/>
+    <RestaurantCategory 
+    key={category?.card?.card.title}
+     data={category?.card?.card}/>
    ))}
       
     </div>

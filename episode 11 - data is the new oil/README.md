@@ -185,3 +185,6 @@ File name 'd:/Namaste React/Namaste react by pb7/Namaste-react/episode 11 - data
 UserContext ta proper casing chara jehetu import korechilam header file e tai 
 .provider method kaj korchilo na for header component
 
+
+![different cases of UserContext.Provider](image-12.png)
+

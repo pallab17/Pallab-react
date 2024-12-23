@@ -110,3 +110,20 @@ aar value duto jehetu same tai oi particular accordian ta expand hocche aar bski
 
 
 
+props drilling- sharing  data through components using props
+kotha ta hocche je ekta react application e onek component thake
+eibar suppose ami ekta data dadu component ke banachi aar chaichi nati sei data take screen e show korak
+so eitar jonno dadu should give the data to nati
+but dadu eita directly korte parbe  na
+dadu ke prothome data take baba ke dite hobe tarpor baba oi data take baccha take pass korbe 
+![dummy data diye props drilling](image-10.png)
+eibar problem ta hocche je bap toh data take use korlona bap data ta niye ki korbe
+and react e data flow r direction ektai - top to bottom 
+so eikhane jehetu dadu baap chele 2 to component r through te data pass hocche tai oto problem nei 
+but ekta react r boro application e prochur component thake
+so ekta particular component theke onno ekta component e data transfer kora bar bar props likhe likhe seita toh aar sombhob na 
+
+to solve this particular problem react did gift us the react context 
+
+
+

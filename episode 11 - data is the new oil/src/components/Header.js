@@ -1,13 +1,16 @@
 import { LOGO_URL } from "../common/constants";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../common/useOnlineStatus";
+import UserContext from "../common/userContext";
 // import {Component} from path --> syntax for named-export
 
 const Header = () => {
   const [loginbutton, setloginbutton] = useState("Login");
 
   const status = useOnlineStatus();
+
+  const {loggedInUser} = useContext(UserContext);
 
   // console.log("header component called");
   /*
@@ -97,6 +100,7 @@ In `Client-side routing or rendering (CSR)`, during the first load, the webapp i
           >
             {loginbutton}
           </button>
+          <li className="px-4 font-bold">{loggedInUser}</li>
         </ul>
       </div>
     </div>

@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import { CDN_URL } from "../common/constants";
+import UserContext from "../common/userContext";
 
 const RestaurantCard = (props) => {
+
+  const {loggedInUser} =useContext(UserContext);
   console.log(props); // props ta hocche object ta jeita react pathache ei component e sob kota properties ke ekjayega ene wrap up kore
   // const {resName,cuisine} = props;
   // destructure kore enechi jate direct
@@ -94,6 +98,7 @@ const RestaurantCard = (props) => {
       <h4>{avgRating} stars</h4>
       <h4>{costForTwo}</h4>
       <h4>{sla.deliveryTime} minutes</h4>
+      {/* <h4>User:{loggedInUser} </h4> */}
     </div>
   );
 };

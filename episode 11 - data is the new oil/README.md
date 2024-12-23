@@ -125,5 +125,23 @@ so ekta particular component theke onno ekta component e data transfer kora bar 
 
 to solve this particular problem react did gift us the react context 
 
+react context - global level e data store kore rakhe ek rokom
+jeikhan theke khusi access korte parboo sei data take
 
+createContext to create react context -->
+import { createContext } from "react";
+
+const UserContext = createContext({
+    loggedInUser:"Default User",
+})
+
+export default UserContext;
+
+useContext hook use kore data fetch korbo -->
+ const {loggedInUser} = useContext(UserContext); 
+
+ tarpor i can use this data anywhere like this -->
+  <li className="px-4 font-bold">{loggedInUser}</li> 
+
+  
 

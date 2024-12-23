@@ -1,5 +1,5 @@
  
- import React from "react";
+ import React, { useState } from "react";
 
 import useRestaurant from "../common/useRestaurant";
 import { useParams } from "react-router-dom";
@@ -23,6 +23,9 @@ So basically this restaurant menu component is not following the
 
 */
 const RestaurantMenu = () => {
+
+  const[showIndex,setShowIndex] = useState(null);
+
   const { resID } = useParams();
   console.log(resID);
   //So basically we are here declaring and. variable and naming it as rest info and we are using our own custom hook use restaurant hook. And in that hook via passing the restaurant id. Now in that hook when we pass that particular restaurant ID, the information of that restaurant is being fetched by our api. And after that. the information that we are getting from. using our own custom hook that information we are storing in this variable.
@@ -60,11 +63,13 @@ const RestaurantMenu = () => {
       <h2 className="font-bold text-lg">{cuisines}- {costForTwoMessage}</h2>
    {/* accordian categories guno */}
    
-   {categories.map((category)=>(
+   {categories.map((category,index)=>(
     <RestaurantCategory 
+    //controlled component
     key={category?.card?.card.title}
      data={category?.card?.card}
-      showItems={true}
+      showItems={index===showIndex ? true : false}
+      setShowIndex={()=> setShowIndex(index)}
      />
    ))}
       

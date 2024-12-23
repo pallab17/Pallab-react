@@ -58,5 +58,55 @@ controlled component = no nijesso state, baap control korche baccha ke
 
 uncontrolled component =  nijesso state +  baap control korche na baccha ke 
 
+showItems={index===0 && true} --> prothom accordion ta khulbe baki guno bondho thakbe
+
+eibar ami chaichi je 
+ekta particular res ctg te click hole jeno sudhu seitar ei mal mosla display hoye
+
+so amra jehetu controlled component niye khelchi
+tai amra ekta state variable banachi parent component e
+const[showIndex,setShowIndex] = useState(0);
+showItems={index===showIndex ? true : false}
+
+index = 0 hole oi particular res r first ctg ta show hobe
+
+eibar amra chai konobhabe amra jodi ekta particular res ctg te click kori
+sei particular res ctg ta jate show hoye
+
+that means we want to change the value of setShowIndex whenever we click a different res ctg as a result index jokhun oi particular res ctg r sathe same hobe tokhun show hobe items gulo oi res ctg
+
+but how can we change the value of setShowIndex oita toh sudhu baccha component tai parbe as baccha component tai screen e render hocche
+
+now qs is baccha component baap r state ke change korte parbe?
+ans -  directly na , but indirectly ha
+
+ki kore ?
+
+baccha take oi setShowIndex prop hisabe pass kore bolbo change kore dis click korlei
+const[showIndex,setShowIndex] = useState(null); --> 
+
+setShowIndex={()=> setShowIndex(index)} --> setShowIndex take prop hisabe baccha ke send korchi as a fn
+
+
+const RestaurantCategory = ({data,showItems,setShowIndex}) => { 
+    const handleClick = ()=>{
+      setShowIndex();
+    }
+}
+
+so prothome showIndex r value jehetu null sob accordian ei collapsed thakbe
+
+eibar setshowindex fn ta baccha take dicchi 
+and suppose i am clicking on a accordian
+so click korar por
+oi particular accordian r index tar value ta
+index=oi particular accordian r index tar value
+showIndex = oi particular accordian r index tar value
+
+duto jayega tei change hocche
+
+aar value duto jehetu same tai oi particular accordian ta expand hocche aar bski sob accordian close hoye jaache
+
+
 
 

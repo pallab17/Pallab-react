@@ -27,3 +27,12 @@ individual restaurant pg r accordian r design take complete korlam
 
 individual restaurant pg r accordian r logic take complete korlam
 creating our own accordian using the toggle feature 
+
+
+react dev tools 
+components + timeline feature of react dev tools dekhlam
+we can use this to make our appn better
+
+now we are trying create a feature  that jokhun amara ekta accordian khulbo
+baki accordian gulo collapse/bondho hoye jabe
+eta tough as sob kota alada category r nijesso state ache

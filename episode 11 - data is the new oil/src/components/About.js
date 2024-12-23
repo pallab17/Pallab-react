@@ -1,6 +1,7 @@
 import User from "./User"
 import UserClass from "./UserClass";
 import React from "react";
+import UserContext from "../common/UserContext";
 
 // const About = ()=> {
 //     return(
@@ -34,6 +35,18 @@ class About extends React.Component{
         return(
             <>
                 <h1>About Us page</h1>
+                <div>
+                    LoggedInUser
+                    <UserContext.Consumer>
+                        {/* {(data)=> console.log(data)} */}
+                        {/* {({loggedInUser}) => (
+                            <h1 className="font-bold">{loggedInUser}</h1>
+                        )} */}
+                        {({loggedInUser}) => {
+                          return  <h1 className="font-bold">{loggedInUser}</h1>
+                        }}
+                    </UserContext.Consumer>
+                </div>
                 <h2>this is me pb7 watching react webseries by akshay saini</h2>
                 {/* <User
                     // name="pb7 functional component" one way of passing props

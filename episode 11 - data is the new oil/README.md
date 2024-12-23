@@ -143,5 +143,19 @@ useContext hook use kore data fetch korbo -->
  tarpor i can use this data anywhere like this -->
   <li className="px-4 font-bold">{loggedInUser}</li> 
 
+  ![class based component about ta](image-11.png)
+   <UserContext.Consumer>
+                        {/* {(data)=> console.log(data)} */}
+                        {/* {({loggedInUser}) => (
+                            <h1 className="font-bold">{loggedInUser}</h1>
+                        )} */}
+                        {({loggedInUser}) => {
+                          return  <h1 className="font-bold">{loggedInUser}</h1>
+                        }}
+                    </UserContext.Consumer>
+
+ class based component e react context value access korar jonno we have to use .
+  .consumer method                   
+
   
 

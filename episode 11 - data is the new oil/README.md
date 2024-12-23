@@ -36,3 +36,27 @@ we can use this to make our appn better
 now we are trying create a feature  that jokhun amara ekta accordian khulbo
 baki accordian gulo collapse/bondho hoye jabe
 eta tough as sob kota alada category r nijesso state ache
+
+recommonded category r itemlist r control recommonded r kache ache
+serom ei newly launced category r itemlist r control newly r kachei ache
+ebar newly jane o na recommnded r state r bepare aar khule naki collapse hoye ache kichui janena
+eibar amra chaichi je bhai recommonded khulle baki category guno jeno collapsee hoye jaaye
+tarmane we want this state to be lifted up
+so i dont want je recommonded category r power jeno recommonded r kache thake
+power ta ami recommonded r baap ke dite chai 
+baap bolbe showitems korbe kina
+
+restaurant menu baap restaurant category r
+so restaurant menu bolbe show korte jokhun ei tokhun ei restaurant category show korbe 
+noile korbe na
+
+so restaurant category r nijesso state thakbe na
+
+controlled component = no nijesso state, baap control korche baccha ke 
+![controlled component r example](image-9.png)
+
+
+uncontrolled component =  nijesso state +  baap control korche na baccha ke 
+
+
+

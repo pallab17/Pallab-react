@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import Itemlist from './Itemlist'
 
-const RestaurantCategory = ({data}) => {
+const RestaurantCategory = ({data,showItems}) => {
     // console.log(data.data.title); props e sudhu data send korle
     // console.log(data.title); props e {data} send korle
-    const [showItems,setShowItems] = useState(false);
+    // const [showItems,setShowItems] = useState(false);
     const handleClick = ()=>{
       // console.log("clicked");
       // setShowItems(true);  // data show hocche but collapse korte parchi na toggle korate hoeb
-      setShowItems(showItems==false); // toggle korchi jodi showtime false hoye tahole false==false hoye expand hobe aar jodi jodi showtime true hoye tahole true==false hoye collapse hobe
+     // setShowItems(showItems==false); // toggle korchi jodi showtime false hoye tahole false==false hoye expand hobe aar jodi jodi showtime true hoye tahole true==false hoye collapse hobe
 
     }
   return (

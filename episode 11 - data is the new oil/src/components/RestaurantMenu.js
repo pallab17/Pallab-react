@@ -63,7 +63,9 @@ const RestaurantMenu = () => {
    {categories.map((category)=>(
     <RestaurantCategory 
     key={category?.card?.card.title}
-     data={category?.card?.card}/>
+     data={category?.card?.card}
+      showItems={true}
+     />
    ))}
       
     </div>

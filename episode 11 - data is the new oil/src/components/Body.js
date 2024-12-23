@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import RestaurantCard ,{RestaurantcardwithLabel} from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../common/useOnlineStatus";
+import UserContext from "../common/UserContext";
 //import resList from "../common/mockdata";
 
 const Body = () => {
@@ -74,6 +75,8 @@ console.log(listOfRestaurants);
   // if(listOfRestaurants.length===0){
   //   return <Shimmer/> ;
   // }
+
+  const {loggedInUser, setUserName} = useContext(UserContext);
 
 const onlineStatus = useOnlineStatus();
 
@@ -153,6 +156,14 @@ if(onlineStatus===false) return <h1>oops internei nei toh ema</h1>
           >
             Fast deliveryTime
           </button>
+        </div>
+        <div className="search p-4 m-4  flex items-center">
+        <label >UserName: </label>
+          <input className="border border-black m-2 p-2"
+          value={loggedInUser}
+          onChange={(e)=>setUserName(e.target.value)}
+          
+           />
         </div>
         </div>
         <div className=" flex flex-wrap">

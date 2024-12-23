@@ -188,3 +188,27 @@ UserContext ta proper casing chara jehetu import korechilam header file e tai
 
 ![different cases of UserContext.Provider](image-12.png)
 
+now we wanna create a input box having the value of loggedInUser
+now whenever we write something in that input box we want the update the value of the loggedInUser
+
+how to do it?
+we will have to pass the setUserName fn to the particular input box and update it
+ 
+ app.js file e 
+ <UserContext.Provider value={{loggedInUser: userName,setUserName}}>   loggedinuser + setuserName fn dutoi pass korchi
+ </UserContext.Provider>
+
+
+body.js file e 
+const {loggedInUser, setUserName} = useContext(UserContext);    duto jinis receive korchi
+<div className="search p-4 m-4  flex items-center">
+        <label >UserName: </label>
+          <input className="border border-black m-2 p-2"
+          value={loggedInUser}
+          onChange={(e)=>setUserName(e.target.value)}    jeta type korchi oita new name hoye jacche for loggedInUser
+          
+           />
+        </div>
+
+
+        so ei bhabe amra react context use korchi.

@@ -43,7 +43,7 @@ const Layout = () => {
 
   return (
     // <>
-    <UserContext.Provider value={{loggedInUser: userName}}>
+    <UserContext.Provider value={{loggedInUser: userName,setUserName}}>
 
       <Header />
       <Outlet />

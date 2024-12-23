@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, useEffect, useState,useContext } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -9,8 +9,12 @@ import Error from "./components/Error";
 //import Grocery from "./components/Grocery";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Shimmer from "./components/Shimmer";
+
 // import Shimmer from "./components/Shimmer";
 //import Shimmer from "./components/Shimmer";
+
+import UserContext from "./common/UserContext";
+
 
 const Grocery = lazy(() => import("./components/Grocery"));
 
@@ -26,23 +30,38 @@ const Footer = () => {
   );
 };
 const Layout = () => {
-  return (
-    <>
-      <Header />
-      {/* <Body /> */}
+  const[userName,setUserName] =  useState();
 
+  useEffect(()=>{
+    // gugul authentication kore user name aar password match korchi tarpor username store kore rakhchi
+
+    const data ={
+      name:"Pallab",
+    }
+    setUserName(data.name);
+  },[]);
+
+  return (
+    // <>
+    <UserContext.Provider value={{loggedInUser: userName}}>
+
+      <Header />
       <Outlet />
-      {/* <Outlet/> outlet hocche sei fn ta basically help kore amader 
+
+    </UserContext.Provider>
+      // {/* <Body /> */}
+
+      /* <Outlet/> outlet hocche sei fn ta basically help kore amader 
       outlet r jayega te onno component ke bosiye dite according to the url 
       eg 
       1.   page = / thakle home pg so  prothome outlet component r jayega te body component swap hoye chole asbe tarpor screen e  header r por body component load hobe
       2.   page = /about thakle about pg so  prothome outlet component r jayega te about component swap hoye chole asbe tarpor screen e  header r por about component load hobe
       3.   page = /contact thakle contact pg so  prothome outlet component r jayega te contact component swap hoye chole asbe tarpor screen e  header r por contact component load hobe
 
-       */}
+       */
 
-      {/* <Footer /> */}
-    </>
+      /* <Footer /> */
+    // </>
   );
 };
 

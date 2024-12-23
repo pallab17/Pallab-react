@@ -157,5 +157,31 @@ useContext hook use kore data fetch korbo -->
  class based component e react context value access korar jonno we have to use .
   .consumer method                   
 
-  
+
+now the qs is how to override/change the value of userContext 
+suppose authentication r por user r naam change hobe from default to username 
+and oi username ta gota application e use hobe
+const[userName,setUserName] =  useState();
+
+  useEffect(()=>{
+    // gugul authentication kore user name aar password match korchi tarpor username store kore rakhchi
+
+    const data ={
+      name:"Pallab",
+    }
+    setUserName(data.name);
+  },[]);
+
+   <UserContext.Provider value={{loggedInUser: userName}}>
+
+      <Header />
+      <Outlet />
+
+    </UserContext.Provider>
+
+    using  .provider method we can change the value of loggedInUser wherever used in the application
+
+File name 'd:/Namaste React/Namaste react by pb7/Namaste-react/episode 11 - data is the new oil/src/common/UserContext.js' differs from already included file name 'd:/Namaste React/Namaste react by pb7/Namaste-react/episode 11 - data is the new oil/src/common/userContext.js' only in casing.
+UserContext ta proper casing chara jehetu import korechilam header file e tai 
+.provider method kaj korchilo na for header component
 

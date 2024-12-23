@@ -2,7 +2,7 @@ import { LOGO_URL } from "../common/constants";
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../common/useOnlineStatus";
-import UserContext from "../common/userContext";
+import UserContext from "../common/UserContext";
 // import {Component} from path --> syntax for named-export
 
 const Header = () => {

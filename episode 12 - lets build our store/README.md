@@ -29,3 +29,21 @@ redux toolkit  = rtk
 jeta sohoj na
 
 add to cart button tiple ki kore data ta card slice e dhoke?
+directly data dhokano jaye na
+ekta upay ache  amader
+
+click on the add button --> dispatch an action now this will call a function
+now thid fn will modify the cart
+![flow ta](image-3.png)
+
+and this fn is known as the reducer function 
+![flow ta](image-4.png)
+
+add button -> dispatch an action -> which calls the reducer function -> which updates the slice of the redux store
+
+now how to read data 
+![reading data ](image-5.png)
+
+now to read data we use selector 
+
+

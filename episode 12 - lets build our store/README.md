@@ -45,5 +45,16 @@ now how to read data
 ![reading data ](image-5.png)
 
 now to read data we use selector 
+and this phenomeonon is known as subscribing to the store
+
+as we say header component is subscribed to a store
+that means the data is sync with the store
+so if the data changes inside the store the header component will update automatically
+
+redux will automatically update the data inside the header component when the store changes
+and how do you subscribe ?
+using the selector.
+
+flow for the last time --> ![flow](image-6.png)
 
 

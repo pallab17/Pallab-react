@@ -58,12 +58,60 @@ using the selector.
 flow for the last time --> ![flow](image-6.png)
 
 #redux toolkit
-install @reduxjs/toolkit and react-redux
-build our store
-connect our store to our app 
-slice(cartslice)
-dispatch(action)
-selector
+ 1. install @reduxjs/toolkit and react-redux
+ using npm i 
+
+ 2. build our store  --> using configureStore
+ const { configureStore } = require("@reduxjs/toolkit");
+import cartReducer from "./cartSlice";
+
+const appStore = configureStore({
+    reducer:{  -> this reducer is the reducer for the whole store
+        cart: cartReducer,     --> eita hocche store r ekta particular slice r reducer
+        this is all about ei particular store e koto guno reducer ache alada alada seiguno eikhane lekh baba
+
+    }
+});
+
+export default appStore;
+
+ 3. connect our store to our app  --> using Provider and props hisabe send korchi appStore ke
+  <Provider store={appStore}>
+  </Provider>
+
+ 4. slice(cartslice) --> we use createSlice to create our cart
+but now createSlice is a object which has many things
+const { createSlice } = require("@reduxjs/toolkit");
+
+
+const cartSlice = createSlice({
+    name: 'cart',    naam ache
+    initialState: {     initial state ache obj eita
+        items:[]
+    },
+    reducers: {       reducer fn ache obj eita
+        addItem : (state,action) =>{
+            state.items.push(action.payload);
+        },
+        removeItem : (state,action) => {
+            state.items.pop();
+        } ,
+        clearCart: (state,action) => {
+            state.items.length=0;
+
+        },
+    },
+})
+
+ 5. dispatch(action)
+export const {addItem,removeItem,clearCart} = cartSlice.actions;   ei particular actions guno ache 
+export default cartSlice.reducer;  cartslice bole ekta slice r reducer eita &&  ei function gulo ache particular actions r jonno
+
+
+
+ 6. selector
+
+
 
 
 

@@ -9,11 +9,13 @@ import Error from "./components/Error";
 //import Grocery from "./components/Grocery";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Shimmer from "./components/Shimmer";
+import { Provider } from "react-redux";
 
 // import Shimmer from "./components/Shimmer";
 //import Shimmer from "./components/Shimmer";
 
 import UserContext from "./common/UserContext";
+import appStore from "./common/appStore";
 
 
 const Grocery = lazy(() => import("./components/Grocery"));
@@ -43,12 +45,14 @@ const Layout = () => {
 
   return (
     // <>
+    <Provider store={appStore}>
     <UserContext.Provider value={{loggedInUser: userName,setUserName}}>
 
       <Header />
       <Outlet />
 
     </UserContext.Provider>
+    </Provider>
       // {/* <Body /> */}
 
       /* <Outlet/> outlet hocche sei fn ta basically help kore amader 

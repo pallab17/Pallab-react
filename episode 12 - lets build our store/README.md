@@ -57,4 +57,13 @@ using the selector.
 
 flow for the last time --> ![flow](image-6.png)
 
+#redux toolkit
+install @reduxjs/toolkit and react-redux
+build our store
+connect our store to our app 
+slice(cartslice)
+dispatch(action)
+selector
+
+
 

@@ -4,7 +4,7 @@ const { createSlice } = require("@reduxjs/toolkit");
 const cartSlice = createSlice({
     name: 'cart',
     initialState: {
-        items:[]
+        items:["Burger","Pizzza"],
     },
     reducers: {
         addItem : (state,action) =>{

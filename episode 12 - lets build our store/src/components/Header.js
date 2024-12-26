@@ -3,6 +3,7 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../common/useOnlineStatus";
 import UserContext from "../common/UserContext";
+import { useSelector } from "react-redux";
 // import {Component} from path --> syntax for named-export
 
 const Header = () => {
@@ -11,6 +12,10 @@ const Header = () => {
   const status = useOnlineStatus();
 
   const {loggedInUser} = useContext(UserContext);
+
+  // subscribing to the store using a selector --> redux store r mal guno r data dekhte gele we need selector
+  const cartItems = useSelector((store)=>store.cart.items);
+
 
   // console.log("header component called");
   /*
@@ -89,7 +94,9 @@ In `Client-side routing or rendering (CSR)`, during the first load, the webapp i
           <li className="px-4">
             <Link to="/grocery">Grocery</Link>
           </li>
-          <li className="px-4">Cart</li>
+          <li className="px-4 font-bold">
+          Cart - ({cartItems.length} items)
+          </li>
           <button
             className="but"
             onClick={() => {

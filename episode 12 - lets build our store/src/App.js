@@ -10,6 +10,7 @@ import Error from "./components/Error";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Shimmer from "./components/Shimmer";
 import { Provider } from "react-redux";
+import Cart from "./components/Cart";
 
 // import Shimmer from "./components/Shimmer";
 //import Shimmer from "./components/Shimmer";
@@ -123,6 +124,11 @@ const appRouter = createBrowserRouter([
       {
         path: "/restaurants/:resID",
         element: <RestaurantMenu />,
+      },
+      {
+        path:"/cart",
+        element: <Cart/>
+
       },
     ],
     errorElement: <Error />,

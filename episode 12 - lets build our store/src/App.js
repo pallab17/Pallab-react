@@ -25,8 +25,9 @@ const currYear = new Date().getFullYear();
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <p>
+   
+    <footer className=" text-center justify-center footer flex   bg-yellow-100 p-4 ">
+      <p className="text-center ">
         Copyright &copy; {currYear}, Made with 💗 by <strong>Pb7</strong>
       </p>
     </footer>
@@ -39,7 +40,8 @@ const Layout = () => {
     // gugul authentication kore user name aar password match korchi tarpor username store kore rakhchi
 
     const data ={
-      name:"Pallab",
+      // name:"Pallab",
+      name:"",
     }
     setUserName(data.name);
   },[]);
@@ -51,6 +53,7 @@ const Layout = () => {
 
       <Header />
       <Outlet />
+      <Footer/>
 
     </UserContext.Provider>
     </Provider>

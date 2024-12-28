@@ -165,6 +165,15 @@ as dekhe lagche we are mutating the old state only
 
 ![both the ways of rtk](image-12.png)
 
+redux dev tools
+![dev tools ](image-14.png)
+
+footer add korlam 
+ektu home  pg customize korlam
+now going to deploy it using netlify
+
+
+
 
 Here’s the difference between the three `onClick` examples you provided:
 

@@ -27,7 +27,7 @@ const RestaurantMenu = () => {
   const[showIndex,setShowIndex] = useState(null);
 
   const { resID } = useParams();
-  console.log(resID);
+  //console.log(resID);
   //So basically we are here declaring and. variable and naming it as rest info and we are using our own custom hook use restaurant hook. And in that hook via passing the restaurant id. Now in that hook when we pass that particular restaurant ID, the information of that restaurant is being fetched by our api. And after that. the information that we are getting from. using our own custom hook that information we are storing in this variable.
   const resInfo = useRestaurant(resID);
   if (resInfo === null) {
@@ -55,7 +55,7 @@ const RestaurantMenu = () => {
   const categories = resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
     (c)=> c.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
   )
-  console.log(categories);
+ // console.log(categories);
 
   return (
     <div className=" text-center  ">

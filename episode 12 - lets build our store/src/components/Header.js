@@ -13,8 +13,9 @@ const Header = () => {
 
   const {loggedInUser} = useContext(UserContext);
 
-  // subscribing to the store using a selector --> redux store r mal guno r data dekhte gele we need selector
+  // subscribing to the store using a selector --> redux store r mal guno r data dekhte gele we need selector --> basically reading data
   const cartItems = useSelector((store)=>store.cart.items);
+  console.log(cartItems);
 
 
   // console.log("header component called");

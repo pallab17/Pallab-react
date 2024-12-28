@@ -171,6 +171,7 @@ redux dev tools
 footer add korlam 
 ektu home  pg customize korlam
 now going to deploy it using netlify
+https://pb7-restaurant.netlify.app/
 
 
 

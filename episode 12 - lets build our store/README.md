@@ -146,13 +146,24 @@ reducer is the big reducer fn which contains all the reducers of the slices of t
 
 and reducers are the containers of the small fns of a particular slice
 
+![old redux vs now redux](image-8.png)
+immer.js is getting used by redux 
+behind the scene
+redux creating an new immutable state making changes to it and returning the new state
+but eita bojha jacche na new redux e 
+as dekhe lagche we are mutating the old state only
 
 
 
 
+![original state vs local state r difference](image-9.png)
 
+![when using console.log we dont get output in reducers of redux](image-10.png)
+![current state take console.log korle output dekhte hobe](image-13.png)
 
+![2nd way of returning a state](image-11.png)
 
+![both the ways of rtk](image-12.png)
 
 
 Here’s the difference between the three `onClick` examples you provided:

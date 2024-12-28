@@ -117,7 +117,7 @@ export default cartSlice.reducer;  cartslice bole ekta slice r reducer eita &&  
 
 
   7. adding data now
-  
+
 const dispatch = useDispatch();
 
   const handleAddItem = (item) => {
@@ -132,6 +132,19 @@ const dispatch = useDispatch();
             </button>
 
 
+
+
+imp points for interview -
+
+1. best use of useselector for better performance
+![both ways of useSelector](image-7.png)
+we shouldnt subscribe to all the parts of the store
+example login part of the store shouldnt be subscribed to the cart pg for this purpose
+
+2. reducer and reducers
+reducer is the big reducer fn which contains all the reducers of the slices of the store
+
+and reducers are the containers of the small fns of a particular slice
 
 
 
@@ -189,3 +202,4 @@ Here’s the difference between the three `onClick` examples you provided:
 ### Best Practice
 - Use **`onClick={handleAddItem}`** if no arguments are required.
 - Use **`onClick={() => handleAddItem(item)}`** if you need to pass arguments.
+

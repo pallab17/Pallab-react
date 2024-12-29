@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { CDN_URL } from "../common/constants";
-import UserContext from "../common/userContext";
+// import UserContext from "../common/userContext";
 
 const RestaurantCard = (props) => {
 
-  const {loggedInUser} =useContext(UserContext);
+  // const {loggedInUser} =useContext(UserContext);
   console.log(props); // props ta hocche object ta jeita react pathache ei component e sob kota properties ke ekjayega ene wrap up kore
   // const {resName,cuisine} = props;
   // destructure kore enechi jate direct
@@ -107,20 +107,20 @@ const RestaurantCard = (props) => {
 // input - Restaurant card
 // output - label + Restaurant card
 
-export const RestaurantcardwithLabel = (RestaurantCard) =>{
-  return () => {
-    // return () => {   returning a component component diner sesh e ekta fn so writing like this
+// export const RestaurantcardwithLabel = (RestaurantCard) =>{
+//   return () => {
+//     // return () => {   returning a component component diner sesh e ekta fn so writing like this
 
-    // now component also returns a jsx
-    return(
-      <div>
-        <label >Discount</label>
-        <RestaurantCard/>
-      </div>
-    )
+//     // now component also returns a jsx
+//     return(
+//       <div>
+//         <label >Discount</label>
+//         <RestaurantCard/>
+//       </div>
+//     )
 
-  }
-}
+//   }
+// }
 
 
 export default RestaurantCard;

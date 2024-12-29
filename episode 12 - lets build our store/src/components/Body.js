@@ -1,25 +1,26 @@
 import { useState, useEffect, useContext } from "react";
-import RestaurantCard ,{RestaurantcardwithLabel} from "./RestaurantCard";
+import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../common/useOnlineStatus";
 import UserContext from "../common/UserContext";
+import useRestaurantCards from "../common/useRestaurantCard";
 //import resList from "../common/mockdata";
 
 const Body = () => {
   //const[listOfRestaurants,setListOfRestaurants] = useState(resList); we are not using the mock data here as swiggy nijeder api data format change koreche so logic break hocche
-  const [listOfRestaurants, setListOfRestaurants] = useState([]); // prothome our app doesnt have any restaurant list
-
+  // const [listOfRestaurants, setListOfRestaurants] = useState([]); // prothome our app doesnt have any restaurant list
+  const { listOfRestaurants, filterredListOfRestaurants, setFilterredListOfRestaurants } = useRestaurantCards()
   // making a copy of the original list of restuarants
-  const [filteredlistOfRestaurants, setfilteredlistOfRestaurants] = useState(
-    []
-  );
-console.log(listOfRestaurants);
+  // const [filteredlistOfRestaurants, setfilteredlistOfRestaurants] = useState(
+  //   []
+  // );
+//console.log(listOfRestaurants);
   const [searchText, setsearchText] = useState("");
 
   // creating a hoc 
   //  HigherOrderRestaurantComponentWithLabel is the hoc which has the restaurant component plus the label
-  const HigherOrderRestaurantComponentWithLabel = RestaurantcardwithLabel(RestaurantCard);
+  // const HigherOrderRestaurantComponentWithLabel = RestaurantcardwithLabel(RestaurantCard);
 
   /* useEffect sikhchi 
   useeffecr hook - useeffect();
@@ -31,9 +32,9 @@ console.log(listOfRestaurants);
 
 
   */
-  useEffect(() => {
-    fetchData(); // ekta fn banachi jeitar modhe logic likhbo to fetch live data from swiggy
-  }, []);
+  // useEffect(() => {
+  //   fetchData(); // ekta fn banachi jeitar modhe logic likhbo to fetch live data from swiggy
+  // }, []);
 
   //  const fetchData = () => {
   //   const data = fetch(
@@ -104,34 +105,34 @@ console.log(listOfRestaurants);
   //   return <Shimmer/> ;
   // }
 
-  const fetchData = async () => {
-    try {
-      const data = await fetch("https://handler-cors.vercel.app/fetch", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          url: "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING",
-        }),
-      });
+  // const fetchData = async () => {
+  //   try {
+  //     const data = await fetch("https://handler-cors.vercel.app/fetch", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify({
+  //         url: "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING",
+  //       }),
+  //     });
 
-      if (!data.ok) {
-        throw new Error(`Error: ${data.status} ${data.statusText}`);
-      }
+  //     if (!data.ok) {
+  //       throw new Error(`Error: ${data.status} ${data.statusText}`);
+  //     }
 
-      const json = await data.json();
-      console.log("Raw JSON:", json);
+  //     const json = await data.json();
+  //     console.log("Raw JSON:", json);
 
-      const restaurants =
-        json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
+  //     const restaurants =
+  //       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
 
-      setListOfRestaurants(restaurants);
-      setfilteredlistOfRestaurants(restaurants);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  };
+  //     setListOfRestaurants(restaurants);
+  //     setfilteredlistOfRestaurants(restaurants);
+  //   } catch (error) {
+  //     console.error("Error fetching data:", error);
+  //   }
+  // };
 
   const {loggedInUser, setUserName} = useContext(UserContext);
 
@@ -177,7 +178,7 @@ if(onlineStatus===false) return <h1>oops internei nei toh ema</h1>
                   //  res.info.name === searchedtext condition ta use korlei hobe
                   // user je text ta search korche seita jodi kono restaurant r naam r sathe mil paye tahole list of restuarant take update kore screen e render korbo using setlistofrestaurants fn
                 );
-                setfilteredlistOfRestaurants(filteredList);
+                setFilterredListOfRestaurants(filteredList);
               }}
             >
               Search
@@ -197,7 +198,7 @@ if(onlineStatus===false) return <h1>oops internei nei toh ema</h1>
                 (r) => r.info.avgRating > 4.2
                 // filteredlist bole ekta var banachi jeitar modhe ami listofRestaurants take update korchi according to their avg rating
               );
-              setfilteredlistOfRestaurants(filteredList); // tarpor ei filteredlist takei pass kore dicchi setlistofrestaurants r modhe such that original list of restuarants ta update hoye jaye when the top rated restaurant button is clicked
+              setFilterredListOfRestaurants(filteredList); // tarpor ei filteredlist takei pass kore dicchi setlistofrestaurants r modhe such that original list of restuarants ta update hoye jaye when the top rated restaurant button is clicked
             }}
           >
             Top Rated Restaurants
@@ -208,7 +209,7 @@ if(onlineStatus===false) return <h1>oops internei nei toh ema</h1>
               const filteredList = listOfRestaurants.filter(
                 (r) => r.info.sla.deliveryTime < 20
               );
-              setfilteredlistOfRestaurants(filteredList);
+              setFilterredListOfRestaurants(filteredList);
             }}
           >
             Fast deliveryTime
@@ -224,7 +225,7 @@ if(onlineStatus===false) return <h1>oops internei nei toh ema</h1>
         </div>
         </div>
         <div className=" flex flex-wrap">
-          {filteredlistOfRestaurants.map((element) => (
+          {filterredListOfRestaurants.map((element) => (
            <Link key={element.info.id}
            to={"/restaurants/" + element.info.id}
            >

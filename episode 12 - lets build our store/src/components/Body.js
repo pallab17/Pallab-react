@@ -46,25 +46,53 @@ console.log(listOfRestaurants);
   //   // method 2 - industry practice - async await function
   //  }
 
-  const fetchData = async () => {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING#"
-      // https://www.swiggy.com/mapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=12.9715987&lng=77.5945627&carousel=true&third_party_vendor=1
-      //https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING#
-    );
-    // converting this data to json
-    const json = await data.json();
+  // const fetchData = async () => {
+  //   const data = await fetch(
+  //     "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING#"
+  //     // https://www.swiggy.com/mapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=12.9715987&lng=77.5945627&carousel=true&third_party_vendor=1
+  //     //https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING#
+  //   );
+  //   // converting this data to json
+  //   const json = await data.json();
 
-    console.log(json);
+  //   console.log(json);
     // eibar ami chaichi ei json r modhe new restuarant r data r list ke take updated data of listofrestaurants baniye di
-    setListOfRestaurants(
-      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
-    // amra copy/duplicate list ta toiri korlam
-    setfilteredlistOfRestaurants(
-      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
-  };
+  //   const fetchData = async () => {
+  //     try {
+  //       const data = await fetch("https://handler-cors.vercel.app/fetch", {
+  //         method: "POST",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //         body: JSON.stringify({
+  //           url: "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+  //         }),
+  //       });
+    
+  //       if (!data.ok) {
+  //         throw new Error(`Error: ${data.status} ${data.statusText}`);
+  //       }
+    
+  //       const json = await data.json();
+  //       console.log(json); // Logging the raw response
+    
+  //       // If you need to extract and display specific restaurant data
+  //       // if (json?.data?.cards) {
+  //       //   const restaurants = json.data.cards.map(card => card?.data?.restaurant || null).filter(Boolean);
+  //       //   console.log("Restaurants:", restaurants);
+  //       // }
+  //     } catch (error) {
+  //       console.error("Error fetching data:", error);
+  //     }
+
+  //   setListOfRestaurants(
+  //     json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+  //   );
+  //   // amra copy/duplicate list ta toiri korlam
+  //   setfilteredlistOfRestaurants(
+  //     json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+  //   );
+  // };
 
   //  if(listOfRestaurants.length === 0){
   //   return <h1>loading...</h1>;
@@ -75,6 +103,35 @@ console.log(listOfRestaurants);
   // if(listOfRestaurants.length===0){
   //   return <Shimmer/> ;
   // }
+
+  const fetchData = async () => {
+    try {
+      const data = await fetch("https://handler-cors.vercel.app/fetch", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          url: "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING",
+        }),
+      });
+
+      if (!data.ok) {
+        throw new Error(`Error: ${data.status} ${data.statusText}`);
+      }
+
+      const json = await data.json();
+      console.log("Raw JSON:", json);
+
+      const restaurants =
+        json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
+
+      setListOfRestaurants(restaurants);
+      setfilteredlistOfRestaurants(restaurants);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
 
   const {loggedInUser, setUserName} = useContext(UserContext);
 

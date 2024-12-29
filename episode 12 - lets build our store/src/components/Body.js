@@ -4,7 +4,7 @@ import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../common/useOnlineStatus";
 import UserContext from "../common/UserContext";
-import useRestaurantCards from "../common/useRestaurantCard";
+import useRestaurantCards from "../common/useRestaurantCards";
 //import resList from "../common/mockdata";
 
 const Body = () => {
